@@ -2,3 +2,4 @@ name: John Muschelli
 markdown: 
     kramdown:
         input: GFM
+permalink: /blog/:year/:month/:day/:title
