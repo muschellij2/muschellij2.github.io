@@ -1,5 +1,3 @@
 name: John Muschelli
-markdown: 
-    kramdown:
-        input: GFM
+markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
