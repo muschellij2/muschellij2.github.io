@@ -1,0 +1,4 @@
+name: John Muschelli
+markdown: 
+    kramdown:
+        input: GFM
