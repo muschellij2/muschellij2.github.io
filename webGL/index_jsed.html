@@ -1,0 +1,215 @@
+
+<html>
+<!-- WebGL Export for 3D Slicer4 powered by XTK -- http://goXTK.com -->
+  <head>
+    <title>WebGL Export</title>
+    <script type="text/javascript" src="xtk_edge.js"></script>
+    <script type="text/javascript">
+      var run = function() {
+
+        renderer0 = new X.renderer3D();
+        renderer0.container = 'r0';
+        renderer0.init();
+
+        scene = new X.object();
+        vtkMRMLModelNode4 = new X.mesh();
+        vtkMRMLModelNode4.file = 'braintest.stl';
+        vtkMRMLModelNode4.color = [0.5, 0.5, 0.5];
+        vtkMRMLModelNode4.opacity = 0.36;
+        vtkMRMLModelNode4.visible = true;
+        vtkMRMLModelNode4.caption = 'Brain_Model';
+        scene.children.push(vtkMRMLModelNode4);
+
+        vtkMRMLModelHierarchyNode1 = new X.object();
+        scene.children.push(vtkMRMLModelHierarchyNode1);
+        
+        vtkMRMLModelNode5 = new X.mesh();
+        vtkMRMLModelNode5.file = 'actest.stl';
+        vtkMRMLModelNode5.color = [2.5, 0, 0];
+        vtkMRMLModelNode5.opacity = 1;
+        vtkMRMLModelNode5.visible = false;
+        vtkMRMLModelNode5.caption = 'Activation';
+        scene.children.push(vtkMRMLModelNode5);
+
+        vtkMRMLModelNode6 = new X.mesh();
+        vtkMRMLModelNode6.file = 'actest2.stl';
+        vtkMRMLModelNode6.color = [0, 2, 0];
+        vtkMRMLModelNode6.opacity = 1;
+        vtkMRMLModelNode6.visible = false;
+        vtkMRMLModelNode6.caption = 'Activation';
+        scene.children.push(vtkMRMLModelNode6);        
+
+        vtkMRMLModelNode7 = new X.mesh();
+        vtkMRMLModelNode7.file = 'diff.stl';
+        vtkMRMLModelNode7.color = [0, 0, 2];
+        vtkMRMLModelNode7.opacity = 1;
+        vtkMRMLModelNode7.visible = false;
+        vtkMRMLModelNode7.caption = 'diff';
+        vtkMRMLModelHierarchyNode1.children.push(vtkMRMLModelNode7);       
+
+        // vtkMRMLModelNode6 = new X.mesh();
+        // vtkMRMLModelNode6.file = 'actest.obj';
+        // vtkMRMLModelNode6.color = [0.95686300000000002, 0.83921599999999996, 0.19215699999999999];
+        // vtkMRMLModelNode6.opacity = 1;
+        // vtkMRMLModelNode6.visible = false;
+        // vtkMRMLModelNode6.caption = 'Activation2';
+        // vtkMRMLModelHierarchyNode1.children.push(vtkMRMLModelNode6);
+
+
+
+
+
+        renderer0.add(scene);
+        renderer0.camera.position = [0.0, 100.0, 0.0];
+        renderer0.camera.up = [0.0, 0.0, 1.0];
+        renderer0.render();
+
+
+
+      };
+ROIS = ['vtkMRMLModelNode5', 'vtkMRMLModelNode6', 'vtkMRMLModelNode4', 'vtkMRMLModelNode7'];
+brains = ['vtkMRMLModelNode4'];
+function GetSelectedItem() {
+
+	chosen = ""
+	len = document.f1.r1.length
+	console.log("doc = " + document.f1.r1);
+	console.log("len = " + len);
+
+	for (i = 0; i <= len; i++) {
+		check = document.f1.r1[i].value
+		console.log("check = " + check);
+
+        	    o = eval(check);
+	            o.visible = false;
+		
+		if (document.f1.r1[i].checked) {
+			chosen = document.f1.r1[i].value;
+            o = eval(chosen);
+            o.visible = true;
+            // o.opacity = 1;
+		console.log("o = " + o);
+		console.log("o.opacity = " + o.opacity);
+					
+		}
+	}
+	
+}
+		
+		  function highlight(what) {
+		    
+		    document.getElementById('all').style.backgroundColor = '#000000';
+		    document.getElementById('ROIS').style.backgroundColor = '#000000';
+		    document.getElementById('brains').style.backgroundColor = '#000000';
+		    
+		    document.getElementById(what).style.backgroundColor = '#736AFF';
+		    
+		  };
+
+		  function show(whatstring, opac) {
+		        
+		    // highlight the div
+		    //    highlight(whatstring); 
+		    
+		    if (whatstring == 'all') {		      
+		      
+		      // show everything
+		      scene.opacity = opac;
+		      scene.visible = true;
+		      
+		    } else {
+		      
+		      // show specific anatomy
+          		what = eval(whatstring);
+		        what.opacity = opac;
+		        what.visible = true;     
+ 			console.log("what = " + what);
+			    
+		    }
+		    
+		  };
+		  
+
+		  
+		  function toggleCheckBox() {
+		    
+		    document.getElementById('showOverlay').checked = !document.getElementById('showOverlay').checked;		    
+		    
+		  };
+		  
+        function printValue(sliderID, textbox) {
+            var x = document.getElementById(textbox);
+            var y = document.getElementById(sliderID);
+            x.value = y.value;
+        };
+
+		  function show2(sliderID, textbox) {
+	            var x = document.getElementById(textbox);
+	            var y = document.getElementById(sliderID);
+		    val = y.value;
+			console.log("scene = " + scene);
+			//scene.opacity = 0;
+/*
+			console.log("brains[1] = " + brains[1]);
+			brains.visible = true;
+			console.log("brains = " + brains);
+			show(brains, 0.5);
+*/
+			for (o in ROIS) {
+				o = eval(ROIS[o]);
+				o.visible = false;
+				// o.opacity = 1.0;
+			}
+
+			//show(brains, 0.5);
+			low = Math.floor(val);
+			op_low = 1 - (val - low);
+			chosen = ROIS[low];
+		        show(chosen, op_low);
+			console.log("low = " + chosen);
+			console.log("op_low = " + op_high);
+/*
+			for (o in ROIS) {
+				console.log("o = ", o);
+			}
+*/
+
+			high = Math.ceil(val);
+
+			op_high = val - low;
+			chosen = ROIS[high];
+			x.value = chosen;
+			show(chosen, op_high);
+			console.log("high = " + chosen);
+			console.log("op_high = " + op_high);
+
+		};
+
+		
+function opac_brain(sliderID, textbox) {
+            var x = document.getElementById(textbox);
+            var y = document.getElementById(sliderID);
+    var val = y.value;
+    x.value = val;
+	low = Math.floor(val);
+	op_low = (val - low);
+vtkMRMLModelNode4.opacity = op_low;
+vtkMRMLModelNode4.visible = true;
+};
+    </script>
+  </head>
+  <body style="margin:0px; padding:0px;" onload="run()">
+        <div id="r0" style="background-color: #ffffff;; width: 75%; height: 75%;"></div>
+
+<FORM NAME = f1>
+<P align="center">
+<Input type = checkbox Name = r1 Value = "vtkMRMLModelNode4" onClick =GetSelectedItem() checked="true">Brain	
+<Input type = checkbox Name = r1 Value = "vtkMRMLModelNode5" onClick =GetSelectedItem()>Group 1
+<Input type = checkbox Name = r1 Value = "vtkMRMLModelNode6" onClick =GetSelectedItem()>Group 2
+<Input type = checkbox Name = r1 Value = "vtkMRMLModelNode7" onClick =GetSelectedItem()>Group 2 - Group 1
+</P>
+</FORM>
+Brain Alpha Blending Slider <input id="slider_brain" type="range" min="0.01" max="0.99" step="0.01" value="0.50" onchange="opac_brain('slider_brain','range_brain');"/>
+<input id="range_brain" type="text" size="10"/>
+  </body>
+</html>
