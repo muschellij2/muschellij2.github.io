@@ -20,6 +20,6 @@ We aim to create educational and instructional videos.  You can see example of a
 ## Disclaimer
 
 Your use of Google APIs with these packages is subject to each API's respective
-terms of service. See <https://developers.google.com/terms/>.
+terms of service. See <https://developers.google.com/terms/>.  The Privacy statement can be seen [here](../google_privacy_policy.html).
 
 
