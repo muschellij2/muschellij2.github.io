@@ -1,3 +1,4 @@
 _site/
 WordPresser.R
 .Rhistory
+mooc-generator/*.rds
