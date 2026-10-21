@@ -14,7 +14,6 @@ project:
     - favicon.ico
     - Bond_Street_Wharf.jpg
     - neuroc_workflow.png
-    - ISBI_2017.zip
     - neuroc.html
     # one-line redirect pages for old talk URLs
     - dean.html
