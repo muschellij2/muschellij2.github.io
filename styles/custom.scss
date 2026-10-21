@@ -1,0 +1,179 @@
+// Hand-written styles. Colours, fonts and shapes come from the generated
+// _generated-{light,dark}.scss files (see _design/decode-seed.R), so this file
+// only describes *how* those tokens are used.
+
+/*-- scss:defaults --*/
+$headings-font-weight: 700;
+$line-height-base: 1.65;
+
+/*-- scss:rules --*/
+:root {
+  --site-accent: #{$accent};
+  --site-surface: #{$surface};
+  --site-muted: #{$muted};
+  --site-radius: #{$border-radius};
+}
+
+body {
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .navbar-brand, .navbar-title {
+  font-family: $headings-font-family;
+  letter-spacing: -0.02em;
+}
+
+// ---- navbar ----------------------------------------------------------------
+@if $navbar-style == 'glass' {
+  .navbar {
+    background: rgba($body-bg, 0.75) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba($body-color, 0.08);
+  }
+}
+.navbar .nav-link {
+  font-weight: 600;
+  border-radius: $border-radius;
+}
+
+// ---- links -----------------------------------------------------------------
+main a:not(.btn):not(.card a):not(.about-link):not(.tl-title) {
+  @if $link-style == 'thick' {
+    text-decoration-thickness: 0.15em;
+  } @else if $link-style == 'offset' {
+    text-decoration-color: rgba($accent, 0.6);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.25em;
+  } @else {
+    text-decoration: none;
+    background: linear-gradient(transparent 60%, rgba($accent, 0.25) 60%);
+  }
+  &:hover { color: $accent; }
+}
+
+// ---- hero ------------------------------------------------------------------
+.hero {
+  margin: 0 0 2.5rem;
+  border-radius: $border-radius;
+  overflow: hidden;
+  background: $surface;
+  p { margin: 0; }
+  img {
+    display: block;
+    width: 100%;
+    height: clamp(120px, 22vw, 200px);
+    object-fit: cover;
+  }
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: $accent;
+  margin-bottom: 0.25rem;
+}
+
+.pronounce { color: $muted; font-style: italic; }
+
+// ---- about page ------------------------------------------------------------
+.quarto-about-marquee, .quarto-about-jolla, .quarto-about-trestles,
+.quarto-about-solana, .quarto-about-broadside {
+  .about-link {
+    border-radius: $border-radius;
+    border: 1px solid rgba($primary, 0.35);
+    font-weight: 600;
+    &:hover { background: $primary; color: $body-bg; }
+  }
+}
+
+// ---- cards (software) ------------------------------------------------------
+.pkg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.pkg-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  border-radius: $border-radius;
+  background: $surface;
+  border: 1px solid rgba($body-color, 0.08);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+  &:hover { transform: translateY(-2px); border-color: $primary; }
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    a { color: $body-color; text-decoration: none; }
+    a::after { content: " ↗"; color: $accent; font-size: 0.8em; }
+  }
+  .pkg-desc { color: $muted; font-size: 0.95rem; flex: 1; }
+  p { margin: 0; }
+  .pkg-meta { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+  .pkg-tag {
+    font-family: $font-family-monospace;
+    font-size: 0.72rem;
+    padding: 0.1rem 0.55rem;
+    border-radius: 999px;
+    background: rgba($primary, 0.12);
+    color: $primary;
+  }
+  img { height: 18px; }
+}
+
+// ---- timeline (talks) ------------------------------------------------------
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  border-left: 2px solid rgba($primary, 0.3);
+  li {
+    position: relative;
+    padding: 0 0 1.5rem 1.5rem;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -7px; top: 0.45rem;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: $body-bg;
+      border: 2px solid $accent;
+    }
+  }
+  .tl-year { font-family: $font-family-monospace; font-size: 0.8rem; color: $accent; }
+  .tl-title { display: block; font-weight: 600; font-size: 1.05rem; }
+  a.tl-title { text-decoration: none; &:hover { color: $accent; } }
+  .tl-venue { color: $muted; font-size: 0.92rem; }
+}
+
+// ---- misc ------------------------------------------------------------------
+.callout-card {
+  padding: 1.25rem 1.5rem;
+  border-radius: $border-radius;
+  background: $surface;
+  border-left: 4px solid $accent;
+  margin: 2rem 0;
+  p:last-child { margin-bottom: 0; }
+}
+
+.nav-footer { font-size: 0.85rem; }
+
+img.wordcloud { border-radius: $border-radius; }
+
+.timeline {
+  .tl-meta { display: flex; gap: 0.6rem; align-items: baseline; flex-wrap: wrap; }
+  .tl-type {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: $muted;
+  }
+  .tl-desc { margin: 0.3rem 0 0; color: $muted; font-size: 0.92rem; }
+}
+.pkg-card .pkg-tag-gh { background: rgba($accent, 0.14); color: $accent; }

@@ -1,0 +1,63 @@
+---
+title: "John Muschelli"
+aliases:
+  - contact.html
+  - index2.html
+subtitle: "Biostatistics · Wearables · Neuroimaging · R"
+pagetitle: "John Muschelli"
+# Layout (template, photo) is chosen by the design seed:
+metadata-files:
+  - _design/about.yml
+# About-page buttons live in data/links.yml
+---
+
+::: {.hero}
+![](images/hero.svg){.light-content fig-alt="Decorative statistical artwork"}
+![](images/hero-dark.svg){.dark-content fig-alt="Decorative statistical artwork"}
+:::
+
+::: {.eyebrow}
+About me
+:::
+
+My name is John **Muschelli** <span class="pronounce">(pronounced Moo-shell-e)</span>,
+and I am an Associate Research Professor in the Department of Biostatistics at the
+[Johns Hopkins Bloomberg School of Public Health](https://publichealth.jhu.edu/) (JHSPH).
+I received my ScM in Biostatistics under the advising of Brian Caffo and my PhD
+under Ciprian Crainiceanu, both from JHSPH, and a BS in Biomathematics and
+Neuroscience from the University of Scranton.
+
+I work on wearable and accelerometry data (step counts, sleep, physical activity
+in studies like NHANES and UK Biobank) and on processing and analyzing medical
+images, usually of the brain. I write a lot of [R software](software.qmd) to make
+that easier, [teach](teaching.qmd) data science, and co-host the podcast
+[The Corresponding Author](projects.qmd#podcast).
+
+My blog, [A HopStat and a Jump Away](https://hopstat.wordpress.com), is updated
+much more often than this site.
+
+::: {.callout-card}
+**Collaborators** ·
+[Ciprian Crainiceanu](https://publichealth.jhu.edu/faculty/2020/ciprian-m-crainiceanu),
+[Brian Caffo](http://www.bcaffo.com/),
+Dan Hanley, and
+Stewart Mostofsky.
+
+**Affiliations** ·
+[JHSPH Biostatistics](https://publichealth.jhu.edu/departments/biostatistics) ·
+[SMART](http://www.smart-stats.org/) ·
+[BIOS](http://braininjuryoutcomes.com/) ·
+[LNIR](http://lnir.kennedykrieger.org/)
+
+**Recognition** ·
+2025 Excellence in Teaching Award (Johns Hopkins) ·
+2014 SOURCE Community Service Award ·
+winning team, 2011 ADHD-200 Global Competition ·
+Presidential Scholar, University of Scranton
+:::
+
+## Contact {#contact}
+
+| Department of Biostatistics, Johns Hopkins University
+| 615 N. Wolfe Street, Baltimore, MD 21205
+| Email: jmuschel [at] jhsph [dot] edu

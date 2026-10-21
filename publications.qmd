@@ -1,0 +1,15 @@
+---
+title: "Publications"
+---
+
+::: {.callout-card}
+The full, up-to-date list lives on my
+[Google Scholar profile](https://scholar.google.com/citations?user=T9eqZgMAAAAJ&hl=en)
+and in my [CV](https://github.com/muschellij2/CV/raw/master/Current_CV.pdf).
+:::
+
+## Publications as a wordcloud
+
+Co-authors' last names on the left, words from my paper titles on the right.
+
+![](images/Muschelli_wordcloud.png){.wordcloud fig-alt="Wordcloud of co-author names and title words"}

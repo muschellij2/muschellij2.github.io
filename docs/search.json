@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "2025 Excellence in Teaching Award, Johns Hopkins."
+  },
+  {
+    "objectID": "teaching.html#course-sites-tutorials",
+    "href": "teaching.html#course-sites-tutorials",
+    "title": "Teaching",
+    "section": "Course sites & tutorials",
+    "text": "Course sites & tutorials\n\nIntroduction to R, course materials\nFaculty Office Hour\nImaging in R (aka Neurohacking 2.0)\nNeurohacking on Coursera\nBuilding R Packages (ENAR 2020 short course)\nNeuroconductor tutorials and a worked fMRI task-processing example"
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software",
+    "section": "",
+    "text": "Most of my work ends up as an R package: more than 30 on CRAN, plus many more on GitHub. My newer work on wearables lives with the JHU Wearables group and installs together via activerse. Filter by topic on the right.\n\n\n\n\nactiverse\n\n\nAttach the whole family of actigraphy packages at once, tidyverse-style.\n\n\nwearablesGitHub\n\n\n\n\nactibase\n\n\nBaseline functions for actigraphy and activity processing and analysis.\n\n\nwearables\n\n\n\n\nactiread\n\n\nRead actigraphy and activity data from many devices.\n\n\nwearables\n\n\n\n\nactimetrics\n\n\nCreate metrics for actigraphy and activity analysis.\n\n\nwearables\n\n\n\n\nactisomni\n\n\nCreate sleep measures from actigraphy data.\n\n\nwearables\n\n\n\n\nactiplot\n\n\nPlotting minute-level activity data.\n\n\nwearablesvisualization\n\n\n\n\nactiquantiles\n\n\nMap activity data to normalized quantiles.\n\n\nwearables\n\n\n\n\nmapnhanespa\n\n\nMap quantiles for physical activity from NHANES.\n\n\nwearables\n\n\n\n\nactisensorlog\n\n\nSummarize SensorLog / SensorLogger phone activity data.\n\n\nwearables\n\n\n\n\nactiwalkability\n\n\nAccess the EPA Walkability Index.\n\n\nwearablesinterfaces\n\n\n\n\nactinet\n\n\nEstimate human activity from accelerometry data.\n\n\nwearables\n\n\n\n\nstepcount\n\n\nEstimate step counts from accelerometry data (wraps OxWearables stepcount).\n\n\nwearables\n\n\n\n\nwalking\n\n\nSegment accelerometry data into walking bouts using open-source methods.\n\n\nwearables\n\n\n\n\nasleep\n\n\nEstimate sleep from accelerometry data.\n\n\nwearables\n\n\n\n\nsleeper\n\n\nEstimate sleep status from wrist-worn accelerometry data.\n\n\nwearables\n\n\n\n\nstepcadence\n\n\nCompute cadence metrics from NHANES step-count data.\n\n\nwearablesGitHub\n\n\n\n\nwrite.gt3x\n\n\nWrite ActiGraph GT3X files.\n\n\nwearablesGitHub\n\n\n\n\nfslr\n\n\nWrapper functions for FSL (FMRIB Software Library).\n\n\nneuroimaging\n\n\n\n\nneurobase\n\n\nNeuroconductor base package with helper functions for nifti objects.\n\n\nneuroimaging\n\n\n\n\nfreesurfer\n\n\nWrapper functions for FreeSurfer.\n\n\nneuroimaging\n\n\n\n\nWhiteStripe\n\n\nWhite-matter normalization for magnetic resonance images.\n\n\nneuroimaging\n\n\n\n\nstapler\n\n\nSimultaneous Truth and Performance Level Estimation (STAPLE).\n\n\nneuroimagingstatistics\n\n\n\n\ngifti\n\n\nRead neuroimaging GIFTI files with geometry information.\n\n\nneuroimaging\n\n\n\n\ncifti\n\n\nToolbox for Connectivity Informatics Technology Initiative (CIFTI) files.\n\n\nneuroimaging\n\n\n\n\nneurohcp\n\n\nInterface to the Human Connectome Project data.\n\n\nneuroimaginginterfaces\n\n\n\n\nbrainR\n\n\nHelper functions to misc3d and rgl for interactive 3D brain imaging.\n\n\nneuroimagingvisualization\n\n\n\n\nkirby21.base\n\n\nExample data from the multi-modal MRI reproducibility resource (also kirby21.t1, kirby21.fmri).\n\n\nneuroimagingdata\n\n\n\n\nichseg\n\n\nIntracerebral hemorrhage segmentation of CT scans.\n\n\nneuroimagingGitHub\n\n\n\n\nlungct\n\n\nSegmentation and analysis of lung CT scans.\n\n\nneuroimagingGitHub\n\n\n\n\nextrantsr\n\n\nAdditional functionality and extensions to ANTsR.\n\n\nneuroimagingGitHub\n\n\n\n\nspm12r\n\n\nR interface for SPM12 (Statistical Parametric Mapping) processing.\n\n\nneuroimagingGitHub\n\n\n\n\npapayar\n\n\nView medical research images with the Papaya JavaScript viewer.\n\n\nneuroimagingvisualizationGitHub\n\n\n\n\ndcm2niir\n\n\nR wrapper for the dcm2nii DICOM converter.\n\n\nneuroimagingGitHub\n\n\n\n\nneurovault\n\n\nNeuroVault database API access.\n\n\nneuroimaginginterfacesGitHub\n\n\n\n\ncforward\n\n\nForward selection using concordance / C-index.\n\n\nstatistics\n\n\n\n\ndiffr\n\n\nDisplay differences between two files using the Codediff library.\n\n\nvisualization\n\n\n\n\nrscopus\n\n\nScopus database API interface.\n\n\ninterfaces\n\n\n\n\ngcite\n\n\nGoogle Scholar citation parser.\n\n\ninterfaces\n\n\n\n\nmatlabr\n\n\nAn interface for MATLAB using system calls.\n\n\ninterfaces\n\n\n\n\ntext2speech\n\n\nText-to-speech conversion across several cloud services.\n\n\ninterfaces\n\n\n\n\nmscstts\n\n\nR client for the Microsoft Cognitive Services text-to-speech REST API.\n\n\ninterfaces\n\n\n\n\nglassdoor\n\n\nInterface to the Glassdoor API.\n\n\ninterfaces\n\n\n\n\nnsrr\n\n\nInterface to the National Sleep Research Resource.\n\n\ninterfacesGitHub\n\n\n\n\ndidactr\n\n\nTools for creating automated courses.\n\n\nteachingGitHub\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "The Corresponding Author, an academic data science podcast with Stephanie Hicks (2019–)."
+  },
+  {
+    "objectID": "projects.html#podcast",
+    "href": "projects.html#podcast",
+    "title": "Projects",
+    "section": "",
+    "text": "The Corresponding Author, an academic data science podcast with Stephanie Hicks (2019–)."
+  },
+  {
+    "objectID": "projects.html#shiny-apps-interactive-demos",
+    "href": "projects.html#shiny-apps-interactive-demos",
+    "title": "Projects",
+    "section": "Shiny apps & interactive demos",
+    "text": "Shiny apps & interactive demos\n\n\n\n\nDo Data Analysis with Your Voice!\n\n\nSpeak dplyr commands and watch them run.\n\n\n2019\n\n\n\n\nA Sortable NIH RFA Table\n\n\nSearch and sort current NIH requests for applications.\n\n\n2019\n\n\n\n\nSlides to a Leanpub Course\n\n\nTurn a folder of slides into a Leanpub course.\n\n\n2019\n\n\n\n\nSegmentation of Intracranial Hemorrhage\n\n\nInteractive results of ICH segmentation from CT scans.\n\n\n2016\n\n\n\n\nAbandoned Cars in Baltimore\n\n\nFind abandoned-vehicle reports around Baltimore.\n\n\n2015\n\n\n\n\nOnline DICOM to NIfTI Converter\n\n\nConvert DICOM medical images to NIfTI in the browser.\n\n\n2014\n\n\n\n\nCost of Common Medical Procedures\n\n\nHospital charges across the US from CMS data, mapped.\n\n\n2014\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects.html#hackathons",
+    "href": "projects.html#hackathons",
+    "title": "Projects",
+    "section": "Hackathons",
+    "text": "Hackathons\n\n2015 · Safer Baltimore Biking, JHU Data Science Hackathon. Used open Baltimore City data on accidents and road hazards to map road safety; geocoded hazards and helped build the final Leaflet map.\n2015 · IdEar, MedHacks 1.0. A proof of concept that ears can act as biometric markers where population registries are poor, using SIFT features and an SVM. Top 10 of 30 teams."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "John Muschelli",
+    "section": "",
+    "text": "My name is John Muschelli (pronounced Moo-shell-e), and I am an Associate Research Professor in the Department of Biostatistics at the Johns Hopkins Bloomberg School of Public Health (JHSPH). I received my ScM in Biostatistics under the advising of Brian Caffo and my PhD under Ciprian Crainiceanu, both from JHSPH, and a BS in Biomathematics and Neuroscience from the University of Scranton.\nI work on wearable and accelerometry data (step counts, sleep, physical activity in studies like NHANES and UK Biobank) and on processing and analyzing medical images, usually of the brain. I write a lot of R software to make that easier, teach data science, and co-host the podcast The Corresponding Author.\nMy blog, A HopStat and a Jump Away, is updated much more often than this site."
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "John Muschelli",
+    "section": "Contact",
+    "text": "Contact\nDepartment of Biostatistics, Johns Hopkins University\n615 N. Wolfe Street, Baltimore, MD 21205\nEmail: jmuschel [at] jhsph [dot] edu"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "The full, up-to-date list lives on my Google Scholar profile and in my CV."
+  },
+  {
+    "objectID": "publications.html#publications-as-a-wordcloud",
+    "href": "publications.html#publications-as-a-wordcloud",
+    "title": "Publications",
+    "section": "Publications as a wordcloud",
+    "text": "Publications as a wordcloud\nCo-authors’ last names on the left, words from my paper titles on the right."
+  },
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "2025\n\nNHANES Accelerometry and Derivatives Rollins School of Public Health, Emory University · Atlanta, GA\n\n\n\n2020\n\nNeuroconductor: An R Platform for Medical Imaging Analysis University of Arkansas for Medical Sciences (UAMS) · Little Rock, AR\n\n\n\n2017\n\nComputational Methods for Neuroimaging in R, Hemorrhagic Stroke and Neuroconductor University of Pennsylvania · Philadelphia, PA\n\n\n\n2017\n\nNeuroconductor: A Neuroimaging Analysis Project in R University of Mississippi Medical Center (UMMC) · Jackson, MS\n\n\n\n2016\n\nComputational Methods for Neuroimaging in R, Hemorrhagic Stroke and Neuroconductor University of Rochester · Rochester, NY\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks.html#invited-seminars",
+    "href": "talks.html#invited-seminars",
+    "title": "Talks & Presentations",
+    "section": "",
+    "text": "2025\n\nNHANES Accelerometry and Derivatives Rollins School of Public Health, Emory University · Atlanta, GA\n\n\n\n2020\n\nNeuroconductor: An R Platform for Medical Imaging Analysis University of Arkansas for Medical Sciences (UAMS) · Little Rock, AR\n\n\n\n2017\n\nComputational Methods for Neuroimaging in R, Hemorrhagic Stroke and Neuroconductor University of Pennsylvania · Philadelphia, PA\n\n\n\n2017\n\nNeuroconductor: A Neuroimaging Analysis Project in R University of Mississippi Medical Center (UMMC) · Jackson, MS\n\n\n\n2016\n\nComputational Methods for Neuroimaging in R, Hemorrhagic Stroke and Neuroconductor University of Rochester · Rochester, NY\n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks.html#scientific-meetings",
+    "href": "talks.html#scientific-meetings",
+    "title": "Talks & Presentations",
+    "section": "Scientific meetings",
+    "text": "Scientific meetings\n\n\n\n\n2025Tutorial\n\nProcessing Accelerometer Data in R Emerging Statistical Methods for Digital Health Data (BIRS)\n\n\n\n2020Tutorial\n\nR Package Development ENAR (online due to COVID-19)\n\n\n\n2020Talk\n\nNeuroconductor: Medical Image Analysis in R Information Processing and Management of Uncertainty in Knowledge-Based Systems (IPMU)\n\n\n\n2019Talk\n\nPotential Batch Effects and Biases in the UK Biobank Accelerometer Data ENAR · Philadelphia, PA\n\n\n\n2018Talk\n\nNeuroconductor and Reproducibility: Imaging in R Joint Statistical Meetings (JSM) · Vancouver, BC\n\n\n\n2018Talk\n\nMy First Exposure to Accelerometer Data was for 100,000 People from UK Biobank CMStatistics 2018 (ERCIM WG) · Pisa, Italy\n\n\n\n2018Talk & hackathon co-organizer\n\nSubmitting to CRAN and Continuous Integration R Package Hackathon, Statistics in Imaging Conference · Philadelphia, PA\n\n\n\n2018Talk\n\nImaging Statistics in R Statistics in Imaging Conference · Philadelphia, PA\n\n\n\n2018Short course\n\nNeuroimaging Analysis within R ENAR · Atlanta, GA\n\n\n\n2018Talk\n\nRobust Lesion Segmentation on MRI of Patients with Multiple Sclerosis Genentech · South San Francisco, CA\n\n\n\n2018Talk\n\nMedical Image Analysis in R Winter Conference on Brain Research (WCBR)\n\n\n\n2017Poster\n\nNeuroconductor: A Framework for Reproducible Neuroimaging Analysis in R ENAR · Washington, DC\n\n\n\n2017Discussant & organizer\n\nCreating Interactive Graphics Joint Statistical Meetings (JSM) · Baltimore, MD\n\n\n\n2017Talk & worked example\n\nMedical Image Analysis in R Integrative Multimodality Methods for Studying Brain Function\n\n\n\n2017Talk\n\nNeuroconductor: Medical Image Analysis in R Statistics in Imaging · Pittsburgh, PA\n\n\n\n2016Talk\n\nPapayar: A Better Interactive Neuroimage Plotter in R Joint Statistical Meetings (JSM) · Chicago, IL\n\n\n\n2016Talk\n\nProcessing Neuroimaging Data in R: Capabilities Mathematical and Statistical Challenges in Neuroimaging Data Analysis · Banff, AB\n\n\n\n2016Talk\n\nProcessing fMRI Data in R SAMSI Challenges in Functional Connectivity Modeling and Analysis · Durham, NC\n\n\n\n2015Talk\n\nSucceeding in Undergraduate: A Message to Top Students Sun Valley High School · Aston, PA\n\n\n\n2015Poster\n\nSuBGELS: Subtraction-Based Gadolinium-Enhancing Lesion Segmentation Hopkins Imaging Conference · Baltimore, MD\n\n\n\n2015Speed talk & poster\n\nAutomated Intracerebral Hemorrhage Segmentation of CT Scans Joint Statistical Meetings (JSM) · Seattle, WA\n\n\n\n2015Poster\n\nPItcHPERFECT: Primary Intracerebral Hemorrhage Prediction Employing Regression and Features Extracted from CT ENAR · Miami, FL\n\n\n\n2015Poster\n\nQuantitative Localization and Predictive Performance of Intracranial Hemorrhage International Stroke Conference (ISC) · Nashville, TN\n\n\n\n2015Poster\n\nValidated Automatic Brain Extraction of Head CT Images Organization for Human Brain Mapping (OHBM) · Honolulu, HI\n\n\n\n2014Talk & poster\n\nValidated Automatic Brain Extraction of Head CT Images Hopkins Imaging Conference · Baltimore, MD\n\n\n\n2014Poster · Top Poster award\n\nReduction of Motion-Related Artifacts in Resting State fMRI Using aCompCor Hopkins Imaging Conference · Baltimore, MD\n\n\n\n2013Talk\n\nVisualizing Brain Imaging in Interactive 3D ENAR · Orlando, FL\n\n\n\n2012Poster\n\nResting State Preprocessing and Motion Artifacts Second Biennial Conference on Resting State · Magdeburg, Germany\n\n\n\n2012Poster\n\nEffects of Preprocessing on Motion-Induced Artifacts in Resting State fMRI Society for Neuroscience (SfN) · New Orleans, LA\n\n\nNo matching items"
+  }
+]

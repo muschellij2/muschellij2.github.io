@@ -1,4 +1,7 @@
-_site/
 WordPresser.R
 .Rhistory
 mooc-generator/*.rds
+.Rproj.user
+.DS_Store
+/.quarto/
+**/*.quarto_ipynb

@@ -1,0 +1,41 @@
+# Courses and workshops (from CV teaching.tex). Newest first.
+- title: Advanced Data Science I and II
+  venue: JHSPH · Co-instructor
+  year: 2023–
+  description: Applied statistics, data analysis and computing, from machine learning and resampling to high-performance computing and databases.
+- title: Introduction to R for Public Health Researchers
+  venue: JHSPH Winter & Summer Institutes · Co-instructor
+  year: 2014–2020
+  path: https://johnmuschelli.com/intro_to_r/
+  description: One-week intensive course co-developed with Andrew Jaffe.
+- title: R Package Development
+  venue: ENAR · Instructor
+  year: 2020
+  path: http://johnmuschelli.com/smi_2019
+  description: Tutorial on building, testing and releasing R packages.
+- title: R Software Development Workshop
+  venue: Statistical Methods in Imaging (SMI) · Instructor
+  year: 2019
+  description: Two-hour workshop for 40 statisticians, with Amanda Mejia.
+- title: Neuroimaging Analysis within R
+  venue: ENAR · Instructor
+  year: 2018
+  path: http://johnmuschelli.com/imaging_in_r/
+  description: Four-hour short course for statisticians.
+- title: Neuroimaging Analysis within R
+  venue: ISBI · Instructor
+  year: 2017
+  description: Four-hour tutorial for biomedical engineers.
+- title: Advanced Data Science
+  venue: JHSPH · Co-instructor
+  year: 2016–2017
+  description: Hands-on introduction to applied statistics and data analysis.
+- title: A Tutorial for Multisequence Clinical Structural Brain MRI
+  venue: ENAR · Instructor
+  year: 2015
+  description: Three-hour tutorial for 35 statisticians.
+- title: Neurohacking with R
+  venue: Coursera · Instructor
+  year: 2015
+  path: https://www.coursera.org/learn/neurohacking
+  description: MOOC on neuroimage processing and statistical analysis entirely within R.

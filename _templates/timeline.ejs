@@ -1,0 +1,10 @@
+<ul class="timeline">
+<% for (const item of items) { %>
+<li <%= metadataAttrs(item) %>>
+<div class="tl-meta"><% if (item.year) { %><span class="tl-year"><%= item.year %></span><% } %><% if (item.type) { %><span class="tl-type"><%= item.type %></span><% } %></div>
+<% if (item.path) { %><a class="tl-title" href="<%- item.path %>"><%= item.title %></a><% } else { %><span class="tl-title"><%= item.title %></span><% } %>
+<span class="tl-venue"><%= item.venue %><% if (item.location) { %> · <%= item.location %><% } %></span>
+<% if (item.description) { %><p class="tl-desc"><%= item.description %></p><% } %>
+</li>
+<% } %>
+</ul>

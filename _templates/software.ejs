@@ -1,0 +1,9 @@
+<div class="pkg-grid">
+<% for (const item of items) { %>
+<div class="pkg-card" <%= metadataAttrs(item) %>>
+<h3><a href="<%- item.path %>"><%= item.title %></a></h3>
+<div class="pkg-desc"><%= item.description %></div>
+<div class="pkg-meta"><% for (const cat of (item.categories || [])) { %><span class="pkg-tag"><%= cat %></span><% } %><% if (item.year) { %><span class="pkg-tag"><%= item.year %></span><% } %><% if (item.cran) { %><img loading="lazy" alt="CRAN downloads for <%= item.title %>" src="https://cranlogs.r-pkg.org/badges/grand-total/<%= item.title %>"><% } else if (item.categories) { %><span class="pkg-tag pkg-tag-gh">GitHub</span><% } %></div>
+</div>
+<% } %>
+</div>

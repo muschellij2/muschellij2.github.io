@@ -1,0 +1,217 @@
+# One entry per package, shown in this order on the Software page.
+# `cran: true` -> CRAN download badge; otherwise it is tagged "GitHub".
+# CRAN list = packages with Muschelli as maintainer (tools::CRAN_package_db()).
+
+# ---- wearables & accelerometry (jhuwit) ------------------------------------
+- title: activerse
+  description: Attach the whole family of actigraphy packages at once, tidyverse-style.
+  path: https://jhuwit.github.io/activerse/
+  categories: [wearables]
+- title: actibase
+  description: Baseline functions for actigraphy and activity processing and analysis.
+  path: https://cran.r-project.org/package=actibase
+  categories: [wearables]
+  cran: true
+- title: actiread
+  description: Read actigraphy and activity data from many devices.
+  path: https://cran.r-project.org/package=actiread
+  categories: [wearables]
+  cran: true
+- title: actimetrics
+  description: Create metrics for actigraphy and activity analysis.
+  path: https://cran.r-project.org/package=actimetrics
+  categories: [wearables]
+  cran: true
+- title: actisomni
+  description: Create sleep measures from actigraphy data.
+  path: https://cran.r-project.org/package=actisomni
+  categories: [wearables]
+  cran: true
+- title: actiplot
+  description: Plotting minute-level activity data.
+  path: https://cran.r-project.org/package=actiplot
+  categories: [wearables, visualization]
+  cran: true
+- title: actiquantiles
+  description: Map activity data to normalized quantiles.
+  path: https://cran.r-project.org/package=actiquantiles
+  categories: [wearables]
+  cran: true
+- title: mapnhanespa
+  description: Map quantiles for physical activity from NHANES.
+  path: https://cran.r-project.org/package=mapnhanespa
+  categories: [wearables]
+  cran: true
+- title: actisensorlog
+  description: Summarize SensorLog / SensorLogger phone activity data.
+  path: https://cran.r-project.org/package=actisensorlog
+  categories: [wearables]
+  cran: true
+- title: actiwalkability
+  description: Access the EPA Walkability Index.
+  path: https://cran.r-project.org/package=actiwalkability
+  categories: [wearables, interfaces]
+  cran: true
+- title: actinet
+  description: Estimate human activity from accelerometry data.
+  path: https://cran.r-project.org/package=actinet
+  categories: [wearables]
+  cran: true
+- title: stepcount
+  description: Estimate step counts from accelerometry data (wraps OxWearables stepcount).
+  path: https://cran.r-project.org/package=stepcount
+  categories: [wearables]
+  cran: true
+- title: walking
+  description: Segment accelerometry data into walking bouts using open-source methods.
+  path: https://cran.r-project.org/package=walking
+  categories: [wearables]
+  cran: true
+- title: asleep
+  description: Estimate sleep from accelerometry data.
+  path: https://cran.r-project.org/package=asleep
+  categories: [wearables]
+  cran: true
+- title: sleeper
+  description: Estimate sleep status from wrist-worn accelerometry data.
+  path: https://cran.r-project.org/package=sleeper
+  categories: [wearables]
+  cran: true
+- title: stepcadence
+  description: Compute cadence metrics from NHANES step-count data.
+  path: https://github.com/jhuwit/stepcadence
+  categories: [wearables]
+- title: write.gt3x
+  description: Write ActiGraph GT3X files.
+  path: https://github.com/muschellij2/write.gt3x
+  categories: [wearables]
+
+# ---- neuroimaging ----------------------------------------------------------
+- title: fslr
+  description: Wrapper functions for FSL (FMRIB Software Library).
+  path: https://cran.r-project.org/package=fslr
+  categories: [neuroimaging]
+  cran: true
+- title: neurobase
+  description: Neuroconductor base package with helper functions for nifti objects.
+  path: https://cran.r-project.org/package=neurobase
+  categories: [neuroimaging]
+  cran: true
+- title: freesurfer
+  description: Wrapper functions for FreeSurfer.
+  path: https://johnmuschelli.com/freesurfer/
+  categories: [neuroimaging]
+  cran: true
+- title: WhiteStripe
+  description: White-matter normalization for magnetic resonance images.
+  path: https://cran.r-project.org/package=WhiteStripe
+  categories: [neuroimaging]
+  cran: true
+- title: stapler
+  description: Simultaneous Truth and Performance Level Estimation (STAPLE).
+  path: https://cran.r-project.org/package=stapler
+  categories: [neuroimaging, statistics]
+  cran: true
+- title: gifti
+  description: Read neuroimaging GIFTI files with geometry information.
+  path: https://cran.r-project.org/package=gifti
+  categories: [neuroimaging]
+  cran: true
+- title: cifti
+  description: Toolbox for Connectivity Informatics Technology Initiative (CIFTI) files.
+  path: https://cran.r-project.org/package=cifti
+  categories: [neuroimaging]
+  cran: true
+- title: neurohcp
+  description: Interface to the Human Connectome Project data.
+  path: https://cran.r-project.org/package=neurohcp
+  categories: [neuroimaging, interfaces]
+  cran: true
+- title: brainR
+  description: Helper functions to misc3d and rgl for interactive 3D brain imaging.
+  path: https://cran.r-project.org/package=brainR
+  categories: [neuroimaging, visualization]
+  cran: true
+- title: kirby21.base
+  description: Example data from the multi-modal MRI reproducibility resource (also kirby21.t1, kirby21.fmri).
+  path: https://cran.r-project.org/package=kirby21.base
+  categories: [neuroimaging, data]
+  cran: true
+- title: ichseg
+  description: Intracerebral hemorrhage segmentation of CT scans.
+  path: https://github.com/muschellij2/ichseg
+  categories: [neuroimaging]
+- title: lungct
+  description: Segmentation and analysis of lung CT scans.
+  path: https://github.com/muschellij2/lungct
+  categories: [neuroimaging]
+- title: extrantsr
+  description: Additional functionality and extensions to ANTsR.
+  path: https://github.com/muschellij2/extrantsr
+  categories: [neuroimaging]
+- title: spm12r
+  description: R interface for SPM12 (Statistical Parametric Mapping) processing.
+  path: https://github.com/muschellij2/spm12r
+  categories: [neuroimaging]
+- title: papayar
+  description: View medical research images with the Papaya JavaScript viewer.
+  path: https://github.com/muschellij2/papayar
+  categories: [neuroimaging, visualization]
+- title: dcm2niir
+  description: R wrapper for the dcm2nii DICOM converter.
+  path: https://github.com/muschellij2/dcm2niir
+  categories: [neuroimaging]
+- title: neurovault
+  description: NeuroVault database API access.
+  path: https://github.com/muschellij2/neurovault
+  categories: [neuroimaging, interfaces]
+
+# ---- statistics, interfaces & tools ----------------------------------------
+- title: cforward
+  description: Forward selection using concordance / C-index.
+  path: https://cran.r-project.org/package=cforward
+  categories: [statistics]
+  cran: true
+- title: diffr
+  description: Display differences between two files using the Codediff library.
+  path: https://cran.r-project.org/package=diffr
+  categories: [visualization]
+  cran: true
+- title: rscopus
+  description: Scopus database API interface.
+  path: https://cran.r-project.org/package=rscopus
+  categories: [interfaces]
+  cran: true
+- title: gcite
+  description: Google Scholar citation parser.
+  path: https://cran.r-project.org/package=gcite
+  categories: [interfaces]
+  cran: true
+- title: matlabr
+  description: An interface for MATLAB using system calls.
+  path: https://cran.r-project.org/package=matlabr
+  categories: [interfaces]
+  cran: true
+- title: text2speech
+  description: Text-to-speech conversion across several cloud services.
+  path: https://cran.r-project.org/package=text2speech
+  categories: [interfaces]
+  cran: true
+- title: mscstts
+  description: R client for the Microsoft Cognitive Services text-to-speech REST API.
+  path: https://cran.r-project.org/package=mscstts
+  categories: [interfaces]
+  cran: true
+- title: glassdoor
+  description: Interface to the Glassdoor API.
+  path: https://cran.r-project.org/package=glassdoor
+  categories: [interfaces]
+  cran: true
+- title: nsrr
+  description: Interface to the National Sleep Research Resource.
+  path: https://github.com/muschellij2/nsrr
+  categories: [interfaces]
+- title: didactr
+  description: Tools for creating automated courses.
+  path: https://github.com/jhudsl/didactr
+  categories: [teaching]

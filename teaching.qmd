@@ -1,0 +1,26 @@
+---
+title: "Teaching"
+subtitle: "Courses, short courses, and workshops — mostly about doing real work in R."
+listing:
+  id: teaching
+  contents: data/teaching.yml
+  template: _templates/timeline.ejs
+  sort: false
+---
+
+::: {.callout-card}
+**2025 Excellence in Teaching Award**, Johns Hopkins.
+:::
+
+::: {#teaching}
+:::
+
+## Course sites & tutorials
+
+- [Introduction to R](https://johnmuschelli.com/intro_to_r/), course materials
+- [Faculty Office Hour](https://johnmuschelli.com/Faculty_Office_Hour/)
+- [Imaging in R](https://johnmuschelli.com/imaging_in_r/) (aka Neurohacking 2.0)
+- [Neurohacking](https://www.coursera.org/learn/neurohacking) on Coursera
+- [Building R Packages](https://johnmuschelli.com/smi_2019/) (ENAR 2020 short course)
+- [Neuroconductor tutorials](https://johnmuschelli.com/neuroc/) and a
+  [worked fMRI task-processing example](https://johnmuschelli.com/talks/fmri_task_processing/index.html#1)

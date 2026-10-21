@@ -1,0 +1,26 @@
+# Invited seminars (from CV talks_and_presentations.tex). Newest first.
+- title: NHANES Accelerometry and Derivatives
+  venue: Rollins School of Public Health, Emory University
+  location: Atlanta, GA
+  year: 2025
+  path: https://jhuwit.github.io/nhanes_derivatives/emory.html
+- title: "Neuroconductor: An R Platform for Medical Imaging Analysis"
+  venue: University of Arkansas for Medical Sciences (UAMS)
+  location: Little Rock, AR
+  year: 2020
+  path: https://johnmuschelli.com/neuroc_talk/Arkansas_2020.html
+- title: Computational Methods for Neuroimaging in R, Hemorrhagic Stroke and Neuroconductor
+  venue: University of Pennsylvania
+  location: Philadelphia, PA
+  year: 2017
+  path: https://johnmuschelli.com/neuroc_talk/Penn.html
+- title: "Neuroconductor: A Neuroimaging Analysis Project in R"
+  venue: University of Mississippi Medical Center (UMMC)
+  location: Jackson, MS
+  year: 2017
+  path: https://johnmuschelli.com/neuroc_talk/index.html
+- title: Computational Methods for Neuroimaging in R, Hemorrhagic Stroke and Neuroconductor
+  venue: University of Rochester
+  location: Rochester, NY
+  year: 2016
+  path: https://johnmuschelli.com/neuroc_talk/Rochester.html

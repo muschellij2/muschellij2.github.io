@@ -1,0 +1,29 @@
+# Shiny apps and interactive demos (from the CV).
+- title: Do Data Analysis with Your Voice!
+  description: Speak dplyr commands and watch them run.
+  path: https://jhubiostatistics.shinyapps.io/Speak_dplyr/
+  year: 2019
+- title: A Sortable NIH RFA Table
+  description: Search and sort current NIH requests for applications.
+  path: https://jhubiostatistics.shinyapps.io/rfa_sort/
+  year: 2019
+- title: Slides to a Leanpub Course
+  description: Turn a folder of slides into a Leanpub course.
+  path: https://jhubiostatistics.shinyapps.io/slides_to_leanpub/
+  year: 2019
+- title: Segmentation of Intracranial Hemorrhage
+  description: Interactive results of ICH segmentation from CT scans.
+  path: http://johnmuschelli.com/ich_segment_all.html
+  year: 2016
+- title: Abandoned Cars in Baltimore
+  description: Find abandoned-vehicle reports around Baltimore.
+  path: https://jmuschelli.shinyapps.io/Abandoned_Baltimore_Car
+  year: 2015
+- title: Online DICOM to NIfTI Converter
+  description: Convert DICOM medical images to NIfTI in the browser.
+  path: https://muschellij2.shinyapps.io/dcm2nii
+  year: 2014
+- title: Cost of Common Medical Procedures
+  description: Hospital charges across the US from CMS data, mapped.
+  path: https://jmuschelli.shinyapps.io/Shiny_Health_Data
+  year: 2014

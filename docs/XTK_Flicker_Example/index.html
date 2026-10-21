@@ -1,0 +1,38 @@
+
+<html>
+<!-- WebGL Export for 3D Slicer4 powered by XTK -- http://goXTK.com -->
+  <head>
+    <title>WebGL Export</title>
+    <script type="text/javascript" src="http://get.goXTK.com/xtk.js"></script>
+    <script type="text/javascript">
+      var run = function() {
+
+var r = new X.renderer3D();
+r.init();
+
+var v = new X.mesh();
+v.file = 'mesh2.stl';
+v.visible = true;
+v.opacity = 0.6;
+v.color = [0.95686274509803926, 0.83921568627450982, 0.19215686274509805];
+
+var v2 = new X.mesh();
+v2.file = 'mesh3.stl';
+v2.visible = true;
+v2.opacity = 0.8;
+v2.color = [2, 0.396078431372549, 0.30980392156862746];
+
+r.add(v);
+r.add(v2);
+r.render();
+r.camera.position = [103.25686895752543, 118.38620769985212, 111.73017428417266];
+r.camera.up = [-0.3649831145419602, -0.45057491372391778, 0.81472054915899494];
+
+
+      };
+    </script>
+  </head>
+  <body style="margin:0px; padding:0px;" onload="run()">
+
+  </body>
+</html>

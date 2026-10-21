@@ -1,0 +1,143 @@
+# Scientific meetings (from CV talks_and_presentations.tex).
+# Listed in file order -- put the newest talk at the top.
+- title: Processing Accelerometer Data in R
+  venue: Emerging Statistical Methods for Digital Health Data (BIRS)
+  year: 2025
+  type: Tutorial
+  path: https://jhuwit.github.io/accel_in_r/tutorial.html
+- title: R Package Development
+  venue: ENAR (online due to COVID-19)
+  year: 2020
+  type: Tutorial
+  path: http://johnmuschelli.com/smi_2019
+- title: "Neuroconductor: Medical Image Analysis in R"
+  venue: Information Processing and Management of Uncertainty in Knowledge-Based Systems (IPMU)
+  year: 2020
+  type: Talk
+  path: https://johnmuschelli.com/IPMU_2020.html
+- title: Potential Batch Effects and Biases in the UK Biobank Accelerometer Data
+  venue: ENAR · Philadelphia, PA
+  year: 2019
+  type: Talk
+  path: https://johnmuschelli.com/ENAR_2019.html
+- title: "Neuroconductor and Reproducibility: Imaging in R"
+  venue: Joint Statistical Meetings (JSM) · Vancouver, BC
+  year: 2018
+  type: Talk
+  path: http://johnmuschelli.com/jsm_2018
+- title: My First Exposure to Accelerometer Data was for 100,000 People from UK Biobank
+  venue: CMStatistics 2018 (ERCIM WG) · Pisa, Italy
+  year: 2018
+  type: Talk
+  path: https://johnmuschelli.com/CMStat_2018/index.html
+- title: Submitting to CRAN and Continuous Integration
+  venue: R Package Hackathon, Statistics in Imaging Conference · Philadelphia, PA
+  year: 2018
+  type: Talk & hackathon co-organizer
+  path: http://johnmuschelli.com/smi_2018
+- title: Imaging Statistics in R
+  venue: Statistics in Imaging Conference · Philadelphia, PA
+  year: 2018
+  type: Talk
+  path: http://johnmuschelli.com/smi_2018
+- title: Neuroimaging Analysis within R
+  venue: ENAR · Atlanta, GA
+  year: 2018
+  type: Short course
+  path: http://johnmuschelli.com/imaging_in_r/
+- title: Robust Lesion Segmentation on MRI of Patients with Multiple Sclerosis
+  venue: Genentech · South San Francisco, CA
+  year: 2018
+  type: Talk
+  path: http://johnmuschelli.com/Genentech_Talk_2018.html
+- title: Medical Image Analysis in R
+  venue: Winter Conference on Brain Research (WCBR)
+  year: 2018
+  type: Talk
+  path: https://johnmuschelli.com/neuroc_talk/WCBR_2018.html
+- title: "Neuroconductor: A Framework for Reproducible Neuroimaging Analysis in R"
+  venue: ENAR · Washington, DC
+  year: 2017
+  type: Poster
+  path: http://johnmuschelli.com/neuroconductor_poster/neuroconductor_poster.pdf
+- title: Creating Interactive Graphics
+  venue: Joint Statistical Meetings (JSM) · Baltimore, MD
+  year: 2017
+  type: Discussant & organizer
+  path: http://johnmuschelli.com/JSM_2017
+- title: Medical Image Analysis in R
+  venue: Integrative Multimodality Methods for Studying Brain Function
+  year: 2017
+  type: Talk & worked example
+  path: https://johnmuschelli.com/neuroc_talk/Multimodal_Workshop.html
+- title: "Neuroconductor: Medical Image Analysis in R"
+  venue: Statistics in Imaging · Pittsburgh, PA
+  year: 2017
+  type: Talk
+  path: https://johnmuschelli.com/neuroc_talk/Pitt_Stats_in_Imaging.html
+- title: "Papayar: A Better Interactive Neuroimage Plotter in R"
+  venue: Joint Statistical Meetings (JSM) · Chicago, IL
+  year: 2016
+  type: Talk
+  path: http://johnmuschelli.com/JSM_2016/index.html
+- title: "Processing Neuroimaging Data in R: Capabilities"
+  venue: Mathematical and Statistical Challenges in Neuroimaging Data Analysis · Banff, AB
+  year: 2016
+  type: Talk
+  path: http://johnmuschelli.com/Neuroimaging_in_R/index.html
+- title: Processing fMRI Data in R
+  venue: SAMSI Challenges in Functional Connectivity Modeling and Analysis · Durham, NC
+  year: 2016
+  type: Talk
+  path: http://johnmuschelli.com/Neuroimaging_in_R/fmri_proc.html
+- title: "Succeeding in Undergraduate: A Message to Top Students"
+  venue: Sun Valley High School · Aston, PA
+  year: 2015
+  type: Talk
+- title: "SuBGELS: Subtraction-Based Gadolinium-Enhancing Lesion Segmentation"
+  venue: Hopkins Imaging Conference · Baltimore, MD
+  year: 2015
+  type: Poster
+  path: https://github.com/muschellij2/ESublime_Poster/raw/gh-pages/ESublime_Poster.pdf
+- title: Automated Intracerebral Hemorrhage Segmentation of CT Scans
+  venue: Joint Statistical Meetings (JSM) · Seattle, WA
+  year: 2015
+  type: Speed talk & poster
+  path: http://muschellij2.github.io/Orals_Proposal/JSM_2015_Talk.html
+- title: "PItcHPERFECT: Primary Intracerebral Hemorrhage Prediction Employing Regression and Features Extracted from CT"
+  venue: ENAR · Miami, FL
+  year: 2015
+  type: Poster
+  path: http://muschellij2.github.io/ENAR_2015_Poster/Muschelli_John_CT_ICH_Segmentation_Poster.pdf
+- title: Quantitative Localization and Predictive Performance of Intracranial Hemorrhage
+  venue: International Stroke Conference (ISC) · Nashville, TN
+  year: 2015
+  type: Poster
+- title: Validated Automatic Brain Extraction of Head CT Images
+  venue: Organization for Human Brain Mapping (OHBM) · Honolulu, HI
+  year: 2015
+  type: Poster
+  path: https://github.com/muschellij2/CT_BET/blob/master/Skull_Strip_Paper/Muschelli_John_CTSkullStripping_Long_Poster.pdf
+- title: Validated Automatic Brain Extraction of Head CT Images
+  venue: Hopkins Imaging Conference · Baltimore, MD
+  year: 2014
+  type: Talk & poster
+  path: https://github.com/muschellij2/CT_BET/raw/master/Skull_Strip_Paper/CT_Skull_Stripping_Presentation.pptx
+- title: Reduction of Motion-Related Artifacts in Resting State fMRI Using aCompCor
+  venue: Hopkins Imaging Conference · Baltimore, MD
+  year: 2014
+  type: Poster · Top Poster award
+  path: https://github.com/muschellij2/Motion_Poster/raw/master/Motion_Processing_Poster_RS_2012_mb_revised_dc.pdf
+- title: Visualizing Brain Imaging in Interactive 3D
+  venue: ENAR · Orlando, FL
+  year: 2013
+  type: Talk
+  path: http://muschellij2.github.io/ENAR_2013_Talk/ENAR_Visualization_5Mar2013_Final.html
+- title: Resting State Preprocessing and Motion Artifacts
+  venue: Second Biennial Conference on Resting State · Magdeburg, Germany
+  year: 2012
+  type: Poster
+- title: Effects of Preprocessing on Motion-Induced Artifacts in Resting State fMRI
+  venue: Society for Neuroscience (SfN) · New Orleans, LA
+  year: 2012
+  type: Poster

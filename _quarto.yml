@@ -1,0 +1,96 @@
+project:
+  type: website
+  # GitHub Pages serves this folder (Settings -> Pages -> master /docs)
+  output-dir: docs
+  render:
+    - "*.qmd"
+  # Re-derive the theme from _design/seed.txt before every render
+  pre-render: Rscript _design/decode-seed.R
+  # Files copied through unchanged so existing johnmuschelli.com links keep working
+  resources:
+    - .nojekyll
+    - CNAME
+    - ads.txt
+    - favicon.ico
+    - Bond_Street_Wharf.jpg
+    - neuroc_workflow.png
+    - ISBI_2017.zip
+    - neuroc.html
+    # one-line redirect pages for old talk URLs
+    - dean.html
+    - eba_2025.html
+    - Emory_Talk.html
+    - ENAR_2019.html
+    - ENAR_2020.html
+    - Genentech_Talk.html
+    - ich_segment.html
+    - ich_segment_all.html
+    - IPMU_2020.html
+    - ISBI_2017.html
+    - jnj_talk.html
+    - jnj_talk2.html
+    - jobtalk.html
+    - Penn_2017.html
+    - Pitt_2017.html
+    - Rochester_2016.html
+    - rstudio_server.html
+    - WCBR_2018.html
+    - images/
+    - papers/
+    - code/
+    - misc/
+    - webGL/
+    - XTK_Flicker_Example/
+    # listed file-by-file so the untracked google_token.rds is never published
+    - mooc-generator/index.html
+    - mooc-generator/google_privacy_policy.html
+    - mooc-generator/example_video.mp4
+
+website:
+  title: "John Muschelli"
+  site-url: "https://johnmuschelli.com"
+  repo-url: "https://github.com/muschellij2/muschellij2.github.io"
+  description: "Biostatistics, neuroimaging, and R software."
+  favicon: images/icon.jpg
+  page-navigation: false
+  navbar:
+    left:
+      - href: index.qmd
+        text: About
+      - href: software.qmd
+        text: Software
+      - href: talks.qmd
+        text: Talks
+      - href: teaching.qmd
+        text: Teaching
+      - href: projects.qmd
+        text: Projects
+      - href: publications.qmd
+        text: Publications
+      - href: https://hopstat.wordpress.com/
+        text: Blog
+      - href: https://github.com/muschellij2/CV/raw/master/Current_CV.pdf
+        text: CV
+    right:
+      - icon: github
+        href: https://github.com/muschellij2
+        aria-label: GitHub
+      - icon: mortarboard-fill
+        href: https://scholar.google.com/citations?user=T9eqZgMAAAAJ&hl=en
+        aria-label: Google Scholar
+      - icon: youtube
+        href: https://www.youtube.com/user/mjmusch
+        aria-label: YouTube
+  page-footer:
+    left: "© John Muschelli · Johns Hopkins Bloomberg School of Public Health"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles/_generated-light.scss, styles/custom.scss]
+      dark: [cosmo, styles/_generated-dark.scss, styles/custom.scss]
+    respect-user-color-scheme: true
+    toc: false
+    smooth-scroll: true
+    link-external-newwindow: true

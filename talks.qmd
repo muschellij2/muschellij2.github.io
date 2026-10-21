@@ -1,0 +1,23 @@
+---
+title: "Talks & Presentations"
+subtitle: "Seminars, conference talks, posters, and tutorials."
+listing:
+  - id: seminars
+    contents: data/seminars.yml
+    template: _templates/timeline.ejs
+    sort: false
+  - id: talks
+    contents: data/talks.yml
+    template: _templates/timeline.ejs
+    sort: false
+---
+
+## Invited seminars
+
+::: {#seminars}
+:::
+
+## Scientific meetings
+
+::: {#talks}
+:::

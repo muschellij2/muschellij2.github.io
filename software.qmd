@@ -1,0 +1,20 @@
+---
+title: "Software"
+aliases:
+  - research.html
+subtitle: "R packages for wearables, neuroimaging, and talking to other tools."
+listing:
+  id: packages
+  contents: data/software.yml
+  template: _templates/software.ejs
+  sort: false
+  categories: true
+---
+
+Most of my work ends up as an R package: more than 30 on CRAN, plus many more on
+[GitHub](https://github.com/muschellij2). My newer work on wearables lives with the
+[JHU Wearables group](https://github.com/jhuwit) and installs together via
+[activerse](https://jhuwit.github.io/activerse/). Filter by topic on the right.
+
+::: {#packages}
+:::

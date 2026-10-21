@@ -1,0 +1,30 @@
+---
+title: "Projects"
+subtitle: "Apps, a podcast, and hackathons."
+listing:
+  id: apps
+  contents: data/apps.yml
+  template: _templates/software.ejs
+  sort: false
+---
+
+## Podcast
+
+::: {.callout-card}
+**[The Corresponding Author](https://soundcloud.com/the-corresponding-author)**, an
+academic data science podcast with Stephanie Hicks (2019–).
+:::
+
+## Shiny apps & interactive demos
+
+::: {#apps}
+:::
+
+## Hackathons
+
+- **2015 · [Safer Baltimore Biking](http://kbroman.org/jhudashbike/)**, JHU Data Science
+  Hackathon. Used open Baltimore City data on accidents and road hazards to map road
+  safety; geocoded hazards and helped build the final Leaflet map.
+- **2015 · IdEar**, [MedHacks 1.0](http://medhacks.org/). A proof of concept that ears can
+  act as biometric markers where population registries are poor, using SIFT features and
+  an SVM. Top 10 of 30 teams.
