@@ -27,7 +27,10 @@ hard-code colours or fonts in pages or `styles/custom.scss`.
 Redesign is **live**: merged to `master`, GitHub Pages serves `master` `/docs`.
 `ISBI_2017.zip` is no longer published (imaging_in_r stopped linking it).
 Open items for John to decide:
-- Tick "Enforce HTTPS" in Settings → Pages once GitHub issues the certificate.
+- DNS is on Cloudflare (registrar Namecheap) with the proxy on; Cloudflare
+  provides HTTPS, so GitHub's "Enforce HTTPS"/certificate stays unavailable by
+  choice. Keep Cloudflare SSL/TLS at "Full", not "Flexible". MX, SPF, and the
+  mail/autoconfig/autodiscover records there are Namecheap Private Email.
 - Dependabot flags jQuery 1.11.3 in `_legacy/jquery-1.11.3.min.js`; left on
   purpose (not served from `docs/`).
 - AdSense auto-ads script was dropped (ads.txt kept); old UA analytics dropped
