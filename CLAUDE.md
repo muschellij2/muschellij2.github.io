@@ -23,10 +23,12 @@ hard-code colours or fonts in pages or `styles/custom.scss`.
 
 ## Status (2026-10-21)
 
-Redesign is committed on branch `quarto-redesign` but **not merged or pushed**.
+Redesign is **live**: merged to `master`, GitHub Pages serves `master` `/docs`.
+`ISBI_2017.zip` is no longer published (imaging_in_r stopped linking it).
 Open items for John to decide:
-- Go live: commit + merge to `master`, then immediately switch GitHub Pages
-  source to `master` `/docs` (site is down between the two), and enable HTTPS.
+- Tick "Enforce HTTPS" in Settings → Pages once GitHub issues the certificate.
+- Dependabot flags jQuery 1.11.3 in `_legacy/jquery-1.11.3.min.js`; left on
+  purpose (not served from `docs/`).
 - AdSense auto-ads script was dropped (ads.txt kept); old UA analytics dropped
   (could add a GA4 ID).
 - Five redirects (Emory_Talk, jobtalk, jnj_talk, jnj_talk2, Genentech_Talk)
