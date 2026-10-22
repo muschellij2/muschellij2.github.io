@@ -5,6 +5,7 @@ aliases:
   - index2.html
 subtitle: "Biostatistics · Wearables · Neuroimaging · R"
 pagetitle: "John Muschelli"
+image: images/headshot.jpg  # link-preview card; otherwise Quarto picks the hero SVG
 # Layout (template, photo) is chosen by the design seed:
 metadata-files:
   - _design/about.yml
