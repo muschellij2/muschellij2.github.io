@@ -13,7 +13,9 @@ lists of things are YAML in `data/`.
 | Talks                     | `data/talks.yml`, `data/seminars.yml` (newest at the top) |
 | Teaching                  | `data/teaching.yml`                    |
 | Shiny apps                | `data/apps.yml` (podcast, hackathons in `projects.qmd`) |
-| Publications blurb        | `publications.qmd`                     |
+| Research page             | `research.qmd`, `data/research-papers.yml`, `data/research-repos.yml` |
+| Publications list         | Replace `data/citations.bib` (Google Scholar export), then `Rscript _scripts/publications.R --lookup` |
+| Publication links (DOIs)  | `data/publication-dois.yml` (cache; hand edits are kept) |
 | Navbar, footer            | `_quarto.yml`                          |
 
 Preview with `quarto preview` (or the **Render** button in RStudio/Positron);

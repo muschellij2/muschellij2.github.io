@@ -1,0 +1,103 @@
+# Selected papers for the Research page, grouped by `theme` (one listing per
+# theme on research.qmd). `type` is the tag shown next to the year.
+# Only papers where Muschelli is an author (checked against the CV bib files).
+
+# ---- accelerometry & wearables ---------------------------------------------
+- title: "Comparing step-counting algorithms for high-resolution wrist accelerometry data in older adults in the ARIC study"
+  venue: "Journals of Gerontology: Series A"
+  year: 2025
+  type: Senior author
+  path: https://doi.org/10.1093/gerona/glaf034
+  theme: accelerometry
+- title: "Evaluating step counting algorithms on subsecond wrist-worn accelerometry: a comparison using publicly available data"
+  venue: Journal for the Measurement of Physical Behaviour
+  year: 2024
+  type: Senior author
+  path: https://doi.org/10.1123/jmpb.2024-0008
+  theme: accelerometry
+
+# ---- NHANES & population cohorts -------------------------------------------
+- title: "Comparing step counting algorithms for high-resolution wrist accelerometry data in NHANES 2011–2014"
+  venue: Medicine & Science in Sports & Exercise
+  year: 2025
+  type: Senior author
+  path: https://doi.org/10.1249/MSS.0000000000003616
+  theme: nhanes
+- title: "NHANES 2011–2014: objective physical activity is the strongest predictor of all-cause mortality"
+  venue: Medicine & Science in Sports & Exercise
+  year: 2024
+  type: Co-author
+  path: https://doi.org/10.1249/MSS.0000000000003497
+  theme: nhanes
+- title: "Quantifying the predictive performance of objectively measured physical activity on mortality in the UK Biobank"
+  venue: "Journals of Gerontology: Series A"
+  year: 2021
+  type: Co-author
+  path: https://doi.org/10.1093/gerona/glaa250
+  theme: nhanes
+
+# ---- neuroimaging ----------------------------------------------------------
+- title: "Neuroconductor: an R platform for medical imaging analysis"
+  venue: Biostatistics
+  year: 2018
+  type: First author
+  path: https://doi.org/10.1093/biostatistics/kxx068
+  theme: neuroimaging
+- title: "Recommendations for processing head CT data"
+  venue: Frontiers in Neuroinformatics
+  year: 2019
+  type: Sole author
+  path: https://doi.org/10.3389/fninf.2019.00061
+  theme: neuroimaging
+- title: "Validated automatic brain extraction of head CT images"
+  venue: NeuroImage
+  year: 2015
+  type: First author
+  path: https://doi.org/10.1016/j.neuroimage.2015.03.074
+  theme: neuroimaging
+- title: "fslr: connecting the FSL software with R"
+  venue: The R Journal
+  year: 2015
+  type: First author
+  path: https://doi.org/10.32614/RJ-2015-013
+  theme: neuroimaging
+- title: "Reduction of motion-related artifacts in resting state fMRI using aCompCor"
+  venue: NeuroImage
+  year: 2014
+  type: First author
+  path: https://doi.org/10.1016/j.neuroimage.2014.03.028
+  theme: neuroimaging
+
+# ---- machine learning & AI -------------------------------------------------
+- title: "Bayesian deep learning outperforms clinical trial estimators of intracerebral and intraventricular hemorrhage volume"
+  venue: Journal of Neuroimaging
+  year: 2022
+  type: Senior author
+  path: https://doi.org/10.1111/jon.12997
+  theme: ml
+- title: "3D deep neural network segmentation of intracerebral hemorrhage: development and validation for clinical trials"
+  venue: Neuroinformatics
+  year: 2021
+  type: Senior author
+  path: https://doi.org/10.1007/s12021-020-09493-5
+  theme: ml
+- title: "ROC and AUC with a binary predictor: a potentially misleading metric"
+  venue: Journal of Classification
+  year: 2019
+  type: Sole author
+  path: https://doi.org/10.1007/s00357-019-09345-1
+  theme: ml
+- title: "PItcHPERFeCT: primary intracranial hemorrhage probability estimation using random forests on CT"
+  venue: "NeuroImage: Clinical"
+  year: 2017
+  type: First author
+  path: https://doi.org/10.1016/j.nicl.2017.02.007
+  theme: ml
+
+# ---- reproducible reporting ------------------------------------------------
+- title: "ari: the Automated R Instructor"
+  venue: The R Journal
+  year: 2020
+  type: Senior author
+  path: https://doi.org/10.32614/RJ-2020-023
+  theme: reproducible

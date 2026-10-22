@@ -2,26 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://johnmuschelli.com/teaching.html</loc>
-    <lastmod>2026-10-21T17:55:21.611Z</lastmod>
+    <lastmod>2026-10-21T21:15:23.004Z</lastmod>
   </url>
   <url>
     <loc>https://johnmuschelli.com/software.html</loc>
-    <lastmod>2026-10-21T17:55:06.479Z</lastmod>
-  </url>
-  <url>
-    <loc>https://johnmuschelli.com/projects.html</loc>
-    <lastmod>2026-10-21T17:54:54.578Z</lastmod>
-  </url>
-  <url>
-    <loc>https://johnmuschelli.com/index.html</loc>
-    <lastmod>2026-10-21T18:18:28.549Z</lastmod>
+    <lastmod>2026-10-22T00:16:23.461Z</lastmod>
   </url>
   <url>
     <loc>https://johnmuschelli.com/publications.html</loc>
-    <lastmod>2026-10-21T18:18:28.549Z</lastmod>
+    <lastmod>2026-10-22T00:47:41.537Z</lastmod>
+  </url>
+  <url>
+    <loc>https://johnmuschelli.com/index.html</loc>
+    <lastmod>2026-10-22T00:48:54.657Z</lastmod>
+  </url>
+  <url>
+    <loc>https://johnmuschelli.com/projects.html</loc>
+    <lastmod>2026-10-21T21:15:23.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://johnmuschelli.com/research.html</loc>
+    <lastmod>2026-10-22T00:16:22.979Z</lastmod>
   </url>
   <url>
     <loc>https://johnmuschelli.com/talks.html</loc>
-    <lastmod>2026-10-21T17:54:54.577Z</lastmod>
+    <lastmod>2026-10-21T21:15:23.004Z</lastmod>
   </url>
 </urlset>

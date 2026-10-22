@@ -29,7 +29,7 @@ Neuroscience from the University of Scranton.
 
 I work on wearable and accelerometry data (step counts, sleep, physical activity
 in studies like NHANES and UK Biobank) and on processing and analyzing medical
-images, usually of the brain. I write a lot of [R software](software.qmd) to make
+images, usually of the brain ([more on my research](research.qmd)). I write a lot of [R software](software.qmd) to make
 that easier, [teach](teaching.qmd) data science, and co-host the podcast
 [The Corresponding Author](projects.qmd#podcast).
 
@@ -55,6 +55,23 @@ Stewart Mostofsky.
 winning team, 2011 ADHD-200 Global Competition ·
 Presidential Scholar, University of Scranton
 :::
+
+## Bio & headshot {#bio}
+
+For talk announcements and event programs:
+
+> John Muschelli is an Associate Research Professor in the Department of
+> Biostatistics at the Johns Hopkins Bloomberg School of Public Health. His
+> research focuses on wearable and accelerometry data, including step counts,
+> sleep, and physical activity in studies such as NHANES and the UK Biobank,
+> and on the analysis of medical images of the brain. He has written more than
+> 30 R packages on CRAN, co-hosts the podcast *The Corresponding Author*, and
+> received the 2025 Johns Hopkins Excellence in Teaching Award. He holds an ScM
+> and PhD in Biostatistics from Johns Hopkins and a BS in Biomathematics and
+> Neuroscience from the University of Scranton.
+
+[Download headshot](images/headshot-full.jpg){download="john-muschelli-headshot.jpg"}
+(JPG, 1920 × 2880, 0.9 MB) · Photo: Chris Hartlove
 
 ## Contact {#contact}
 

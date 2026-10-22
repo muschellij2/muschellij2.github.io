@@ -1,11 +1,26 @@
 ---
 title: "Publications"
+subtitle: "Peer-reviewed papers, proceedings, chapters, and theses."
+# data/publications.yml is generated from data/citations.bib by
+# _scripts/publications.R; re-run it after updating the .bib.
+listing:
+  id: pubs
+  contents: data/publications.yml
+  template: _templates/timeline.ejs
+  sort: false
+  categories: true
+  filter-ui: [title, description, venue, year]
+  page-size: 200
 ---
 
 ::: {.callout-card}
-The full, up-to-date list lives on my
-[Google Scholar profile](https://scholar.google.com/citations?user=T9eqZgMAAAAJ&hl=en)
-and in my [CV](https://github.com/muschellij2/CV/raw/master/Current_CV.pdf).
+Also on [Google Scholar](https://scholar.google.com/citations?user=T9eqZgMAAAAJ&hl=en),
+[ORCID](https://orcid.org/0000-0001-6469-1750), and in my
+[CV](https://github.com/muschellij2/CV/raw/master/Current_CV.pdf).
+Search by title, co-author, journal, or year, or filter by type on the right.
+:::
+
+::: {#pubs}
 :::
 
 ## Publications as a wordcloud

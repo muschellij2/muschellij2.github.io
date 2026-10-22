@@ -37,6 +37,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./images/icon.jpg" rel="icon" type="image/jpeg">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -78,12 +80,85 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-pubs .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-venue','listing-year','listing-type','listing-categories',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-venue","listing-year"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-pubs'] = new List('listing-pubs', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Publications – John Muschelli">
+<meta property="og:description" content="Peer-reviewed papers, proceedings, chapters, and theses.">
+<meta property="og:image" content="https://johnmuschelli.com/images/Muschelli_wordcloud.png">
+<meta property="og:site_name" content="John Muschelli">
+<meta property="og:image:alt" content="Wordcloud of co-author names and title words">
+<meta property="og:image:height" content="3600">
+<meta property="og:image:width" content="7200">
+<meta name="twitter:title" content="Publications – John Muschelli">
+<meta name="twitter:description" content="Peer-reviewed papers, proceedings, chapters, and theses.">
+<meta name="twitter:image" content="https://johnmuschelli.com/images/Muschelli_wordcloud.png">
+<meta name="twitter:creator" content="@StrictlyStat">
+<meta name="twitter:image:alt" content="Wordcloud of co-author names and title words">
+<meta name="twitter:image-height" content="3600">
+<meta name="twitter:image-width" content="7200">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -258,7 +333,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-xl " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
@@ -274,6 +349,10 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./research.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./software.html"> 
@@ -320,6 +399,21 @@ ul.task-list li input[type="checkbox"] {
 </i> 
 <span class="menu-text"></span></a>
   </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://bsky.app/profile/strictlystat.bsky.social"> <i class="bi bi-bluesky" role="img" aria-label="Bluesky">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://x.com/StrictlyStat"> <i class="bi bi-twitter-x" role="img" aria-label="X (Twitter)">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/john-muschelli/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -332,7 +426,8 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(118)</span></div><div class="category" data-category="QWJzdHJhY3Q=">Abstract <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Qm9vayUyMGNoYXB0ZXI=">Book chapter <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29uZmVyZW5jZSUyMHBhcGVy">Conference paper <span class="quarto-category-count">(12)</span></div><div class="category" data-category="Sm91cm5hbCUyMGFydGljbGU=">Journal article <span class="quarto-category-count">(95)</span></div><div class="category" data-category="U29mdHdhcmU=">Software <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGhlc2lz">Thesis <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -340,6 +435,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Publications</h1>
+<p class="subtitle lead">Peer-reviewed papers, proceedings, chapters, and theses.</p>
 </div>
 
 
@@ -357,12 +453,1086 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="callout-card">
-<p>The full, up-to-date list lives on my <a href="https://scholar.google.com/citations?user=T9eqZgMAAAAJ&amp;hl=en">Google Scholar profile</a> and in my <a href="https://github.com/muschellij2/CV/raw/master/Current_CV.pdf">CV</a>.</p>
+<p>Also on <a href="https://scholar.google.com/citations?user=T9eqZgMAAAAJ&amp;hl=en">Google Scholar</a>, <a href="https://orcid.org/0000-0001-6469-1750">ORCID</a>, and in my <a href="https://github.com/muschellij2/CV/raw/master/Current_CV.pdf">CV</a>. Search by title, co-author, journal, or year, or filter by type on the right.</p>
+</div>
+<div id="listing-pubs" class="quarto-listing quarto-listing-container-custom">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<ul class="timeline">
+<li data-index="0" data-categories="QWJzdHJhY3Q=">
+<div class="tl-meta">
+<span class="tl-year">2026</span><span class="tl-type">Abstract</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1161/str.57.suppl_1.wp305">Abstract WP305: Comparison of automated brain extraction methods in over 5000 computed tomography scans</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Srirambhatla R, Walborn N, Hanley D, Muschelli J
+</p>
+</li>
+<li data-index="1" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2026</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.bja.2026.03.018">Association of postoperative delirium with haemodynamic determinants of cerebral perfusion pressure during cardiac surgery: A retrospective cohort study</a> <span class="tl-venue">British Journal of Anaesthesia</span>
+<p class="tl-desc">
+Goeddel LA, Gomez J, Hernandez M, Koffman L, Murphy Z, Wayson G, Whitman G, Bandeen-Roche K, Muschelli J, Crainiceanu CM, et al.
+</p>
+</li>
+<li data-index="2" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2026</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.bja.2026.02.037">Low cardiac index during periods of arterial hypotension and risk of acute kidney injury in cardiac surgery</a> <span class="tl-venue">British Journal of Anaesthesia</span>
+<p class="tl-desc">
+Goeddel LA, Koffman L, Zhou X, Hernandez M, Zhao A, Pasrija C, Saha AK, Muschelli J, Parikh CR, Crainiceanu CM, et al.
+</p>
+</li>
+<li data-index="3" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2025</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1053/j.jvca.2025.05.052">Assessment of renal vein flow index by transesophageal echocardiography: Precision, variability, and association with cardiac index during cardiac surgery</a> <span class="tl-venue">Journal of Cardiothoracic and Vascular Anesthesia</span>
+<p class="tl-desc">
+Goeddel LA, Hernandez M, Koffman L, Santino C, Muschelli J, Zhou X, Waldron N, Parikh CR, Lester L, Abozaid R, et al.
+</p>
+</li>
+<li data-index="4" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2025</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1093/gerona/glaf034">Comparing step-counting algorithms for high-resolution wrist accelerometry data in older adults in the ARIC study</a> <span class="tl-venue">The Journals of Gerontology, Series A: Biological Sciences and Medical Sciences</span>
+<p class="tl-desc">
+Gao S, Zhou X, Koffman L, Wanigatunga AA, Schrack JA, Crainiceanu CM, Muschelli J
+</p>
+</li>
+<li data-index="5" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2025</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1213/ane.0000000000007500">Fine-mapping the association of acute kidney injury with mean arterial and central venous pressures during coronary artery bypass surgery</a> <span class="tl-venue">Anesthesia and Analgesia</span>
+<p class="tl-desc">
+Goeddel LA, Hernandez M, Koffman L, Murphy Z, Khanna AK, Robich M, Whitman G, Zhou X, Bandeen-Roche K, Muschelli J, et al.
+</p>
+</li>
+<li data-index="6" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2025</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Function%20on%20scalar%20regression%20with%20complex%20survey%20designs">Function on scalar regression with complex survey designs</a> <span class="tl-venue">arXiv Preprint arXiv:2511.05487</span>
+<p class="tl-desc">
+Koffman L, Gao S, Zhou X, Leroux A, Crainiceanu C, Muschelli J
+</p>
+</li>
+<li data-index="7" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2025</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.neurot.2025.e00581">Intranasal insulin for improving cognitive function in multiple sclerosis</a> <span class="tl-venue">Neurotherapeutics</span>
+<p class="tl-desc">
+Newsome SD, Fitzgerald KC, Hughes A, Beier M, Koshorek J, Wang Y, Maldonado DP, Shoemaker T, Malik T, Bayu T, et al.
+</p>
+</li>
+<li data-index="8" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2025</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Minute%20level%20step%20counts%20and%20physical%20activity%20data%20from%20the%20national%20health%20and%20nutrition%20examination%20survey%20%28NHANES%29%202011-2014">Minute level step counts and physical activity data from the national health and nutrition examination survey (NHANES) 2011-2014</a> <span class="tl-venue">PhysioNet. Version</span>
+<p class="tl-desc">
+Koffman L, Muschelli J, Koffman L, Crainiceanu C, Muschelli J, Pollard T, Moody B, Lehman L, Gow B, Fernandes C, et al.
+</p>
+</li>
+<li data-index="9" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2025</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1093/gerona/glae287">Objectively measured physical activity using wrist-worn accelerometers as a predictor of incident alzheimer’s disease in the UK biobank</a> <span class="tl-venue">The Journals of Gerontology, Series A: Biological Sciences and Medical Sciences</span>
+<p class="tl-desc">
+Zhao A, Cui E, Leroux A, Zhou X, Muschelli J, Lindquist MA, Crainiceanu CM
+</p>
+</li>
+<li data-index="10" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2025</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Walking%20fingerprinting%20using%20wrist%20accelerometry%20during%20activities%20of%20daily%20living%20in%20NHANES">Walking fingerprinting using wrist accelerometry during activities of daily living in NHANES</a> <span class="tl-venue">arXiv Preprint arXiv:2506.17160</span>
+<p class="tl-desc">
+Koffman L, Muschelli J, Crainiceanu C
+</p>
+</li>
+<li data-index="11" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2024</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1213/ane.0000000000007161">Assessment of renal vein stasis index by transesophageal echocardiography during cardiac surgery-a feasibility study</a> <span class="tl-venue">Anesthesia and Analgesia</span>
+<p class="tl-desc">
+Goeddel LA, Hernandez M, Koffman L, Slowey C, Muschelli J, Zhou X, Parikh CR, Lima JA, Bandeen-Roche K, Faraday N, et al.
+</p>
+</li>
+<li data-index="12" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2024</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1249/mss.0000000000003616">Comparing step counting algorithms for high-resolution wrist accelerometry data in NHANES 2011-2014</a> <span class="tl-venue">arXiv Preprint arXiv:2410.11040</span>
+<p class="tl-desc">
+Koffman L, Crainiceanu C, Muschelli J
+</p>
+</li>
+<li data-index="13" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2024</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1123/jmpb.2024-0008">Evaluating step counting algorithms on subsecond wrist-worn accelerometry: A comparison using publicly available data sets</a> <span class="tl-venue">Journal for the Measurement of Physical Behaviour</span>
+<p class="tl-desc">
+Koffman L, Muschelli J
+</p>
+</li>
+<li data-index="14" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2024</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1249/mss.0000000000003497">NHANES 2011–2014: Objective physical activity is the strongest predictor of all-cause mortality</a> <span class="tl-venue">Medicine and Science in Sports and Exercise</span>
+<p class="tl-desc">
+Leroux A, Cui E, Smirnova E, Muschelli J, Schrack JA, Crainiceanu CM
+</p>
+</li>
+<li data-index="15" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2024</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1213/ane.0000000000007206">Occurrence of low cardiac index during normotensive periods in cardiac surgery: A prospective cohort study using continuous noninvasive cardiac output monitoring</a> <span class="tl-venue">Anesthesia and Analgesia</span>
+<p class="tl-desc">
+Goeddel LA, Koffman L, Hernandez M, Whitman G, Parikh CR, Lima JA, Bandeen-Roche K, Zhou X, Muschelli J, Crainiceanu C, et al.
+</p>
+</li>
+<li data-index="16" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2024</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1080/26939169.2024.2394541">Open case studies: Statistics and data science education through real-world applications</a> <span class="tl-venue">Journal of Statistics and Data Science Education</span>
+<p class="tl-desc">
+Wright C, Meng Q, Breshock MR, Atta L, Taub MA, Jager LR, Muschelli J, Hicks SC
+</p>
+</li>
+<li data-index="17" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2023</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.neuroimage.2023.120037">ModelArray: An r package for statistical analysis of fixel-wise data</a> <span class="tl-venue">NeuroImage</span>
+<p class="tl-desc">
+Zhao C, Tapera TM, Bagautdinova J, Bourque J, Covitz S, Gur RE, Gur RC, Larsen B, Mehta K, Meisler SL, et al.
+</p>
+</li>
+<li data-index="18" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2023</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1080/26939169.2022.2118646">Open-source tools for training resources–OTTR</a> <span class="tl-venue">Journal of Statistics and Data Science Education</span>
+<p class="tl-desc">
+Savonen C, Wright C, Hoffman AM, Muschelli J, Cox K, Tan FJ, Leek JT
+</p>
+</li>
+<li data-index="19" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2022</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1111/jon.12997">Bayesian deep learning outperforms clinical trial estimators of intracerebral and intraventricular hemorrhage volume</a> <span class="tl-venue">Journal of Neuroimaging</span>
+<p class="tl-desc">
+Sharrock MF, Mould WA, Hildreth M, Ryu EP, Walborn N, Awad IA, Hanley DF, Muschelli J
+</p>
+</li>
+<li data-index="20" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2022</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.neuroimage.2022.118877">Ciftitools: A package for reading, writing, visualizing, and manipulating cifti files in r</a> <span class="tl-venue">NeuroImage</span>
+<p class="tl-desc">
+Pham DD, Muschelli J, Mejia AF
+</p>
+</li>
+<li data-index="21" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2022</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.2196/preprints.38077">Comparison of accelerometry-based measures of physical activity: Retrospective observational data analysis study</a> <span class="tl-venue">JMIR mHealth and uHealth</span>
+<p class="tl-desc">
+Karas M, Muschelli J, Leroux A, Urbanek JK, Wanigatunga AA, Bai J, Crainiceanu CM, Schrack JA
+</p>
+</li>
+<li data-index="22" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2022</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1177/00333549211058732">Curating the evidence about COVID-19 for frontline public health and clinical care: The novel coronavirus research compendium</a> <span class="tl-venue">Public Health Reports</span>
+<p class="tl-desc">
+Redd AD, Peetluk LS, Jarrett BA, Hanrahan C, Schwartz S, Rao A, Jaffe AE, Peer AD, Jones CB, Lutz CS, et al.
+</p>
+</li>
+<li data-index="23" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2022</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1002/gepi.22441">Genome-wide association studies of 27 accelerometry-derived physical activity measurements identified novel loci and genetic mechanisms</a> <span class="tl-venue">Genetic Epidemiology</span>
+<p class="tl-desc">
+Qi G, Dutta D, Leroux A, Ray D, Muschelli J, Crainiceanu C, Chatterjee N
+</p>
+</li>
+<li data-index="24" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2022</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.21037/tlcr-21-953">Predictive performance of selected breath volatile organic carbon compounds in stage 1 lung cancer</a> <span class="tl-venue">Translational Lung Cancer Research</span>
+<p class="tl-desc">
+Smirnova E, Mallow C, Muschelli J, Shao Y, Thiboutot J, Lam A, Rule AM, Crainiceanu C, Yarmus L
+</p>
+</li>
+<li data-index="25" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2021</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1007/s12021-020-09493-5">3D deep neural network segmentation of intracerebral hemorrhage: Development and validation for clinical trials</a> <span class="tl-venue">Neuroinformatics</span>
+<p class="tl-desc">
+Sharrock MF, Mould WA, Ali H, Hildreth M, Awad IA, Hanley DF, Muschelli J
+</p>
+</li>
+<li data-index="26" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2021</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.neuroimage.2021.118703">A multi-scanner neuroimaging data harmonization using RAVEL and ComBat</a> <span class="tl-venue">Neuroimage</span>
+<p class="tl-desc">
+Torbati ME, Minhas DS, Ahmad G, O’Connor EE, Muschelli J, Laymon CM, Yang Z, Cohen AD, Aizenstein HJ, Klunk WE, et al.
+</p>
+</li>
+<li data-index="27" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2021</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Clinical%20characterization%20and%20prediction%20of%20clinical%20severity%20of%20SARS-CoV-2%20infection%20among%20US%20adults%20using%20data%20from%20the%20US%20national%20COVID%20cohort%20collaborative">Clinical characterization and prediction of clinical severity of SARS-CoV-2 infection among US adults using data from the US national COVID cohort collaborative</a> <span class="tl-venue">JAMA Network Open</span>
+<p class="tl-desc">
+Bennett TD, Moffitt RA, Hajagos JG, Amor B, Anand A, Bissell MM, Bradwell KR, Bremer C, Byrd JB, Denham A, et al.
+</p>
+</li>
+<li data-index="28" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2021</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.7326/m20-6754">Development of severe COVID-19 adaptive risk predictor (SCARP), a calculator to predict severe disease or death in hospitalized patients with COVID-19</a> <span class="tl-venue">Annals of Internal Medicine</span>
+<p class="tl-desc">
+Wongvibulsin S, Garibaldi BT, Antar AA, Wen J, Wang MC, Gupta A, Bollinger R, Xu Y, Wang K, Betz JF, et al.
+</p>
+</li>
+<li data-index="29" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2021</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.3390/s21041545">Diurnal physical activity patterns across ages in a large UK based cohort: The UK biobank study</a> <span class="tl-venue">Sensors</span>
+<p class="tl-desc">
+Wrobel J, Muschelli J, Leroux A
+</p>
+</li>
+<li data-index="30" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2021</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Global%20PCA%20of%20local%20moments%20with%20application%20to%20multi-sequence%20MRI%20segmentation">Global PCA of local moments with application to multi-sequence MRI segmentation</a> <span class="tl-venue"></span>
+<p class="tl-desc">
+Maronge JM, Muschelli J, Crainiceanu CM
+</p>
+</li>
+<li data-index="31" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2021</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1371/journal.pone.0248560">Interpreting blood GLUcose data with r package iglu</a> <span class="tl-venue">PloS One</span>
+<p class="tl-desc">
+Broll S, Urbanek J, Buchanan D, Chun E, Muschelli J, Punjabi NM, Gaynanova I
+</p>
+</li>
+<li data-index="32" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2021</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.neuroimage.2021.118141">Moderated t-tests for group-level fMRI analysis</a> <span class="tl-venue">NeuroImage</span>
+<p class="tl-desc">
+Wang G, Muschelli J, Lindquist MA
+</p>
+</li>
+<li data-index="33" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2021</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1093/aje/kwab138">Outcome-stratified analysis of biomarker trajectories for patients infected with severe acute respiratory syndrome coronavirus 2</a> <span class="tl-venue">American Journal of Epidemiology</span>
+<p class="tl-desc">
+Bowring MG, Wang Z, Xu Y, Betz J, Muschelli J, Garibaldi BT, Zeger SL
+</p>
+</li>
+<li data-index="34" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2021</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Patient%20trajectories%20among%20persons%20hospitalized%20for%20COVID-19%3A%20A%20cohort%20study">Patient trajectories among persons hospitalized for COVID-19: A cohort study</a> <span class="tl-venue">Annals of Internal Medicine</span>
+<p class="tl-desc">
+Garibaldi BT, Fiksel J, Muschelli J, Robinson ML, Rouhizadeh M, Perin J, Schumock G, Nagy P, Gray JH, Malapati H, et al.
+</p>
+</li>
+<li data-index="35" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2021</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1093/gerona/glaa250">Quantifying the predictive performance of objectively measured physical activity on mortality in the UK biobank</a> <span class="tl-venue">The Journals of Gerontology: Series a</span>
+<p class="tl-desc">
+Leroux A, Xu S, Kundu P, Muschelli J, Smirnova E, Chatterjee N, Crainiceanu C
+</p>
+</li>
+<li data-index="36" data-categories="Q29uZmVyZW5jZSUyMHBhcGVy">
+<div class="tl-meta">
+<span class="tl-year">2021</span><span class="tl-type">Conference paper</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1093/ofid/ofab448">Sex and gender differences in testing, hospital admission, clinical presentation, and drivers of severe outcomes from COVID-19</a> <span class="tl-venue">Open Forum Infectious Diseases</span>
+<p class="tl-desc">
+Scully EP, Schumock G, Fu M, Massaccesi G, Muschelli J, Betz J, Klein EY, West NE, Robinson M, Garibaldi BT, et al.
+</p>
+</li>
+<li data-index="37" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2021</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1038/s41598-021-87564-6">The ANTsX ecosystem for quantitative biological and medical imaging</a> <span class="tl-venue">Scientific Reports</span>
+<p class="tl-desc">
+Tustison NJ, Cook PA, Holbrook AJ, Johnson HJ, Muschelli J, Devenyi GA, Duda JT, Das SR, Cullen NC, Gillen DL, et al.
+</p>
+</li>
+<li data-index="38" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2021</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=The%20national%20COVID%20cohort%20collaborative%3A%20Clinical%20characterization%20and%20early%20severity%20prediction">The national COVID cohort collaborative: Clinical characterization and early severity prediction</a> <span class="tl-venue">MedRxiv</span>
+<p class="tl-desc">
+Bennett TD, Moffitt RA, Hajagos JG, Amor B, Anand A, Bissell MM, Bradwell KR, Bremer C, Byrd JB, Denham A, et al.
+</p>
+</li>
+<li data-index="39" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2020</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.socscimed.2019.05.029">“The doctor said formula would help me”: Health sector influences on use of infant formula in peri-urban lima, peru</a> <span class="tl-venue">Social Science &amp; Medicine</span>
+<p class="tl-desc">
+Rothstein JD, Caulfield LE, Broaddus-Shea ET, Muschelli J, Gilman RH, Winch PJ
+</p>
+</li>
+<li data-index="40" data-categories="Q29uZmVyZW5jZSUyMHBhcGVy">
+<div class="tl-meta">
+<span class="tl-year">2020</span><span class="tl-type">Conference paper</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1007/978-3-030-50153-2_27">A publicly available, high resolution, unbiased CT brain template</a> <span class="tl-venue">International Conference on Information Processing and Management of Uncertainty in Knowledge-Based Systems</span>
+<p class="tl-desc">
+Muschelli J
+</p>
+</li>
+<li data-index="41" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2020</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.nicl.2019.102151">An improved algorithm of white matter hyperintensity detection in elderly adults</a> <span class="tl-venue">NeuroImage: Clinical</span>
+<p class="tl-desc">
+Ding T, Cohen A, O’Connor E, Karim H, Crainiceanu A, Muschelli J, Lopez O, Klunk W, Aizenstein H, Krafty R, et al.
+</p>
+</li>
+<li data-index="42" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2020</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=ANTsX%3A%20A%20dynamic%20ecosystem%20for%20quantitative%20biological%20and%20medical%20imaging">ANTsX: A dynamic ecosystem for quantitative biological and medical imaging</a> <span class="tl-venue">medRxiv</span>
+<p class="tl-desc">
+Tustison NJ, Cook PA, Holbrook AJ, Johnson HJ, Muschelli J, Devanyi GA, Duda JT, Das SR, Cullen NC, Gillen DL, et al.
+</p>
+</li>
+<li data-index="43" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2020</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.32614/rj-2020-023">Ari: The automated r instructor</a> <span class="tl-venue">arXiv Preprint arXiv:2007.13477</span>
+<p class="tl-desc">
+Kross S, Leek JT, Muschelli J
+</p>
+</li>
+<li data-index="44" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2020</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.resuscitation.2020.06.023">Postcardiac arrest neurological prognostication with quantitative regional cerebral densitometry</a> <span class="tl-venue">Resuscitation</span>
+<p class="tl-desc">
+Hannawi Y, Muschelli J, Mulder M, Sharrock M, Storm C, Leithner C, Crainiceanu CM, Stevens RD
+</p>
+</li>
+<li data-index="45" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2020</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1007/s12028-020-00916-4">Relationship of white matter lesions with intracerebral hemorrhage expansion and functional outcome: MISTIE II and CLEAR III</a> <span class="tl-venue">Neurocritical Care</span>
+<p class="tl-desc">
+Hansen BM, Ullman N, Muschelli J, Norrving B, Dlugash R, Avadhani R, Awad I, Zuccarello M, Ziai WC, Hanley DF, et al.
+</p>
+</li>
+<li data-index="46" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2020</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1007/s00357-019-09345-1">ROC and AUC with a binary predictor: A potentially misleading metric</a> <span class="tl-venue">Journal of Classification</span>
+<p class="tl-desc">
+Muschelli J
+</p>
+</li>
+<li data-index="47" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2020</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.3389/fninf.2020.572068">Rxnat: An open-source r package for XNAT-based repositories</a> <span class="tl-venue">Frontiers in Neuroinformatics</span>
+<p class="tl-desc">
+Gherman A, Muschelli J, Caffo B, Crainiceanu C
+</p>
+</li>
+<li data-index="48" data-categories="Q29uZmVyZW5jZSUyMHBhcGVy">
+<div class="tl-meta">
+<span class="tl-year">2020</span><span class="tl-type">Conference paper</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1007/978-3-030-50153-2_28">Statistical methods for processing neuroimaging data from two different sites with a down syndrome population application</a> <span class="tl-venue">International Conference on Information Processing and Management of Uncertainty in Knowledge-Based Systems</span>
+<p class="tl-desc">
+Minhas DS, Yang Z, Muschelli J, Laymon CM, Mettenburg JM, Zammit MD, Johnson S, Mathis CA, Cohen AD, Handen BL, et al.
+</p>
+</li>
+<li data-index="49" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2020</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.nicl.2020.102256">TAPAS: A thresholding approach for probability map automatic segmentation in multiple sclerosis</a> <span class="tl-venue">NeuroImage: Clinical</span>
+<p class="tl-desc">
+Valcarcel AM, Muschelli J, Pham DL, Martin ML, Yushkevich P, Brandstadter R, Patterson KR, Schindler MK, Calabresi PA, Bakshi R, et al.
+</p>
+</li>
+<li data-index="50" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2020</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.acra.2019.10.030">Template creation for high-resolution computed tomography scans of the lung in r software</a> <span class="tl-venue">Academic Radiology</span>
+<p class="tl-desc">
+Ryan SM, Vestal B, Maier LA, Carlson NE, Muschelli J
+</p>
+</li>
+<li data-index="51" data-categories="QWJzdHJhY3Q=">
+<div class="tl-meta">
+<span class="tl-year">2019</span><span class="tl-type">Abstract</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1161/str.50.suppl_1.wmp13">Abstract WMP13: 3D convolutional neural network segmentation of intracerebral hemorrhage on CT</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Sharrock MF, Muschelli J, Ali H, Mould WA, Hanley DF
+</p>
+</li>
+<li data-index="52" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2019</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.18608/jla.2019.62.10">Analysis of student behavior using the r package crsra</a> <span class="tl-venue">Journal of Learning Analytics</span>
+<p class="tl-desc">
+Hadavand A, Muschelli J, Leek J
+</p>
+</li>
+<li data-index="53" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2019</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1093/biostatistics/kxx068">Neuroconductor: An r platform for medical imaging analysis</a> <span class="tl-venue">Biostatistics</span>
+<p class="tl-desc">
+Muschelli J, Gherman A, Fortin JP, Avants B, Whitcher B, Clayden JD, Caffo BS, Crainiceanu CM
+</p>
+</li>
+<li data-index="54" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2019</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Package%20%E2%80%9Crscopus%E2%80%9D">Package “rscopus”</a> <span class="tl-venue">Published Online 2019</span>
+<p class="tl-desc">
+Muschelli J
+</p>
+</li>
+<li data-index="55" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2019</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.3389/fninf.2019.00061">Recommendations for processing head CT data</a> <span class="tl-venue">Frontiers in Neuroinformatics</span>
+<p class="tl-desc">
+Muschelli J
+</p>
+</li>
+<li data-index="56" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2019</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Reduction%20in%20perihematomal%20edema%20leads%20to%20improved%20clinical%20outcomes%3A%20Results%20from%20the%20MISTIE%20III%20trial">Reduction in perihematomal edema leads to improved clinical outcomes: Results from the MISTIE III trial</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Mould WA, Muschelli J, Avadhani R, McBee N, Lane K, Thompson R, Ziai W, Zuccarello M, Awad I, Hanley DF
+</p>
+</li>
+<li data-index="57" data-categories="Q29uZmVyZW5jZSUyMHBhcGVy">
+<div class="tl-meta">
+<span class="tl-year">2019</span><span class="tl-type">Conference paper</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Tapas%3A%20Threshold%20adjustment%20to%20probability%20map%20automatic%20segmentations%20of%20multiple%20sclerosis%20brain%20MRI%20lesions">Tapas: Threshold adjustment to probability map automatic segmentations of multiple sclerosis brain MRI lesions</a> <span class="tl-venue">ACTRIMS Forum 2019</span>
+<p class="tl-desc">
+Valcarcel AM, Muschelli J, Crainiceanu C, Pham DL, Calabresi PA, Bakshi R, Shinohara TT
+</p>
+</li>
+<li data-index="58" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2018</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.nicl.2018.10.013">A dual modeling approach to automatic segmentation of cerebral T2 hyperintensities and T1 black holes in multiple sclerosis</a> <span class="tl-venue">NeuroImage: Clinical</span>
+<p class="tl-desc">
+Valcarcel AM, Linn KA, Khalid F, Vandekar SN, Tauhid S, Satterthwaite TD, Muschelli J, Martin ML, Bakshi R, Shinohara RT
+</p>
+</li>
+<li data-index="59" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2018</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1007/s10897-017-0144-1">Feasibility of coping effectiveness training for caregivers of children with autism spectrum disorder: A genetic counseling intervention: Haakonsen smith et al.</a> <span class="tl-venue">Journal of Genetic Counseling</span>
+<p class="tl-desc">
+Haakonsen Smith C, Turbitt E, Muschelli J, Leonard L, Lewis KL, Freedman B, Muratori M, Biesecker BB
+</p>
+</li>
+<li data-index="60" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2018</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.12688/f1000research.14361.1">Freesurfer: Connecting the freesurfer software with r</a> <span class="tl-venue">F1000Research</span>
+<p class="tl-desc">
+Muschelli J, Sweeney E, Crainiceanu CM
+</p>
+</li>
+<li data-index="61" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2018</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Gathering%20bibliometric%20information%20from%20the%20scopus%20API%20using%20rscopus">Gathering bibliometric information from the scopus API using rscopus</a> <span class="tl-venue"></span>
+<p class="tl-desc">
+Muschelli J
+</p>
+</li>
+<li data-index="62" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2018</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Miccai%202016%20ms%20lesion%20segmentation%20challenge%3A%20Supplementary%20results">Miccai 2016 ms lesion segmentation challenge: Supplementary results</a> <span class="tl-venue">(No Title)</span>
+<p class="tl-desc">
+Commowick O, Istace A, Kain M, Laurent B, Leray F, Simon M, Camarasu-Pop S, Girard P, Ameli R, Ferré JC, et al.
+</p>
+</li>
+<li data-index="63" data-categories="Q29uZmVyZW5jZSUyMHBhcGVy">
+<div class="tl-meta">
+<span class="tl-year">2018</span><span class="tl-type">Conference paper</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1007/978-3-030-11723-8_5">MIMoSA: An approach to automatically segment T2 hyperintense and T1 hypointense lesions in multiple sclerosis</a> <span class="tl-venue">International MICCAI Brainlesion Workshop</span>
+<p class="tl-desc">
+Valcarcel AM, Linn KA, Khalid F, Vandekar SN, Tauhid S, Satterthwaite TD, Muschelli J, Bakshi R, Shinohara RT
+</p>
+</li>
+<li data-index="64" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2018</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1111/jon.12506">MIMoSA: An automated method for intermodal segmentation analysis of multiple sclerosis brain lesions</a> <span class="tl-venue">Journal of Neuroimaging</span>
+<p class="tl-desc">
+Valcarcel AM, Linn KA, Vandekar SN, Satterthwaite TD, Muschelli J, Calabresi PA, Pham DL, Martin ML, Shinohara RT
+</p>
+</li>
+<li data-index="65" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2018</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1101/367557">Objective evaluation of multiple sclerosis lesion segmentation using a data management and processing infrastructure</a> <span class="tl-venue">Scientific Reports</span>
+<p class="tl-desc">
+Commowick O, Istace A, Kain M, Laurent B, Leray F, Simon M, Pop SC, Girard P, Ameli R, Ferré JC, et al.
+</p>
+</li>
+<li data-index="66" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2018</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1093/neuonc/nox188">Radiomic subtyping improves disease stratification beyond key molecular, clinical, and standard imaging characteristics in patients with glioblastoma</a> <span class="tl-venue">Neuro-Oncology</span>
+<p class="tl-desc">
+Kickingereder P, Neuberger U, Bonekamp D, Piechotta PL, Götz M, Wick A, Sill M, Kratz A, Shinohara RT, Jones DT, et al.
+</p>
+</li>
+<li data-index="67" data-categories="Q29uZmVyZW5jZSUyMHBhcGVy">
+<div class="tl-meta">
+<span class="tl-year">2018</span><span class="tl-type">Conference paper</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=TAPAS%3A%20Threshold%20adjustment%20to%20probability%20map%20automatic%20segmentations">TAPAS: Threshold adjustment to probability map automatic segmentations</a> <span class="tl-venue">MULTIPLE SCLEROSIS JOURNAL</span>
+<p class="tl-desc">
+Valcarcel A, Muschelli J, Crainiceanu C, Pham D, Calabresi P, Bakshi R, Shinohara R
+</p>
+</li>
+<li data-index="68" data-categories="QWJzdHJhY3Q=">
+<div class="tl-meta">
+<span class="tl-year">2017</span><span class="tl-type">Abstract</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1161/str.48.suppl_1.wp353">Abstract WP353: Bleeding following removal of intracerebral catheters in MISTIE III</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Mould WA, Muschelli J, McBee N, Lane K, Zuccarello M, Awad I, Hanley D
+</p>
+</li>
+<li data-index="69" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2017</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.media.2016.07.009">ISLES 2015-a public evaluation benchmark for ischemic stroke lesion segmentation from multispectral MRI</a> <span class="tl-venue">Medical Image Analysis</span>
+<p class="tl-desc">
+Maier O, Menze BH, Von der Gablentz J, Häni L, Heinrich MP, Liebrand M, Winzeck S, Basit A, Bentley P, Chen L, et al.
+</p>
+</li>
+<li data-index="70" data-categories="U29mdHdhcmU=">
+<div class="tl-meta">
+<span class="tl-year">2017</span><span class="tl-type">Software</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Package%20%E2%80%9Ctuber%E2%80%9D">Package “tuber”</a> <span class="tl-venue">Recuperado El</span>
+<p class="tl-desc">
+Sood G, Lyons K, Muschelli J
+</p>
+</li>
+<li data-index="71" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2017</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/s0140-6736(16)32410-2">Thrombolytic removal of intraventricular haemorrhage in treatment of severe stroke: Results of the randomised, multicentre, multiregion, placebo-controlled CLEAR III trial</a> <span class="tl-venue">The Lancet</span>
+<p class="tl-desc">
+Hanley DF, Lane K, McBee N, Ziai W, Tuhrim S, Lees KR, Dawson J, Gandhi D, Ullman N, Mould WA, et al.
+</p>
+</li>
+<li data-index="72" data-categories="VGhlc2lz">
+<div class="tl-meta">
+<span class="tl-year">2016</span><span class="tl-type">Thesis</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Computational%20methods%20for%20neuroimaging%20in%20r%3A%20Stroke%20hemorrhage%20in%20x-ray%20computed%20tomography%20scanning">Computational methods for neuroimaging in r: Stroke hemorrhage in x-ray computed tomography scanning</a> <span class="tl-venue">PhD Thesis, Johns Hopkins University</span>
+<p class="tl-desc">
+Muschelli J
+</p>
+</li>
+<li data-index="73" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2016</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Large-scale%20radiomic%20profiling%20of%20recurrent%20glioblastoma%20identifies%20an%20imaging%20predictor%20for%20stratifying%20anti-angiogenic%20treatment%20response">Large-scale radiomic profiling of recurrent glioblastoma identifies an imaging predictor for stratifying anti-angiogenic treatment response</a> <span class="tl-venue">Clinical Cancer Research</span>
+<p class="tl-desc">
+Kickingereder P, Götz M, Muschelli J, Wick A, Neuberger U, Shinohara RT, Sill M, Nowosielski M, Schlemmer HP, Radbruch A, et al.
+</p>
+</li>
+<li data-index="74" data-categories="QWJzdHJhY3Q=">
+<div class="tl-meta">
+<span class="tl-year">2016</span><span class="tl-type">Abstract</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1093/neuonc/now212.524">NIMG-12. LARGE-SCALE RADIOMIC PROFILING OF RECURRENT GLIOBLASTOMA IDENTIFIES AN IMAGING PREDICTOR FOR STRATIFYING ANTI-ANGIOGENIC TREATMENT RESPONSE</a> <span class="tl-venue">Oxford University Press, US</span>
+<p class="tl-desc">
+Kickingereder P, Götz M, Muschelli J, Wick A, Neuberger U, T Shinohara R, Sill M, Nowosielski M, Schlemmer HP, Radbruch A, et al.
+</p>
+</li>
+<li data-index="75" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2016</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.nicl.2017.02.007">PItcHPERFeCT: Primary intracranial hemorrhage probability estimation using random forests on CT</a> <span class="tl-venue"></span>
+<p class="tl-desc">
+Muschelli J, Sweeney EM, Ullman NL, Vespa P, Hanley DF, Crainiceanu CM
+</p>
+</li>
+<li data-index="76" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2016</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Prediction%20of%20ms%20lesions%20using%20random%20forests">Prediction of ms lesions using random forests</a> <span class="tl-venue">Proceedings of the 1st MICCAI Challenge on Multiple Sclerosis Lesions Segmentation Challenge Using a Data Management and Processing Infrastructure-MICCAI-MSSEG</span>
+<p class="tl-desc">
+Muschelli J, Sweeney E, Maronge J, Crainiceanu C
+</p>
+</li>
+<li data-index="77" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2016</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1097/mph.0000000000000537">Preventive care delivery to young children with sickle cell disease</a> <span class="tl-venue">Journal of Pediatric Hematology/Oncology</span>
+<p class="tl-desc">
+Bundy DG, Muschelli J, Clemens GD, Strouse JJ, Thompson RE, Casella JF, Miller MR
+</p>
+</li>
+<li data-index="78" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2016</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.nicl.2015.10.013">Relating multi-sequence longitudinal intensity profiles and clinical covariates in incident multiple sclerosis lesions</a> <span class="tl-venue">NeuroImage: Clinical</span>
+<p class="tl-desc">
+Sweeney EM, Shinohara RT, Dewey BE, Schindler MK, Muschelli J, Reich DS, Crainiceanu CM, Eloyan A
+</p>
+</li>
+<li data-index="79" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2016</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.neuroimage.2016.02.036">Removing inter-subject technical variability in magnetic resonance imaging studies</a> <span class="tl-venue">NeuroImage</span>
+<p class="tl-desc">
+Fortin JP, Sweeney EM, Muschelli J, Crainiceanu CM, Shinohara RT, Initiative ADN, et al.
+</p>
+</li>
+<li data-index="80" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2016</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.3389/fnins.2016.00503">Reproducibility and bias in healthy brain segmentation: Comparison of two popular neuroimaging platforms</a> <span class="tl-venue">Frontiers in Neuroscience</span>
+<p class="tl-desc">
+Tudorascu DL, Karim HT, Maronge JM, Alhilali L, Fakhran S, Aizenstein HJ, Muschelli J, Crainiceanu CM
+</p>
+</li>
+<li data-index="81" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2016</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Safety%20and%20efficacy%20of%20minimally%20invasive%20surgery%20plus%20alteplase%20in%20intracerebral%20haemorrhage%20evacuation%20%28MISTIE%29%3A%20A%20randomised%2C%20controlled%2C%20open-label%2C%20phase%202%20trial">Safety and efficacy of minimally invasive surgery plus alteplase in intracerebral haemorrhage evacuation (MISTIE): A randomised, controlled, open-label, phase 2 trial</a> <span class="tl-venue">The Lancet Neurology</span>
+<p class="tl-desc">
+Hanley DF, Thompson RE, Muschelli J, Rosenblum M, McBee N, Lane K, Bistran-Hall AJ, Mayo SW, Keyl P, Gandhi D, et al.
+</p>
+</li>
+<li data-index="82" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2016</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Safety%20and%20efficacy%20of%20minimally%20invasive%20surgery%20plus%20recombinant%20tissue%20plasminogen%20activator%20in%20intracerebral%20haemorrhage%20evacuation%20%28MISTIE%29%3A%20A%20randomised%2C%20phase%202%20trial">Safety and efficacy of minimally invasive surgery plus recombinant tissue plasminogen activator in intracerebral haemorrhage evacuation (MISTIE): A randomised, phase 2 trial</a> <span class="tl-venue">The Lancet. Neurology</span>
+<p class="tl-desc">
+Hanley DF, Thompson RE, Muschelli J, Rosenblum M, McBee N, Lane K, Bistran-Hall AJ, Mayo SW, Keyl P, Gandhi D, et al.
+</p>
+</li>
+<li data-index="83" data-categories="QWJzdHJhY3Q=">
+<div class="tl-meta">
+<span class="tl-year">2015</span><span class="tl-type">Abstract</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1161/str.46.suppl_1.wp327">Abstract w P327: Quantitative localization and predictive performance of intracranial hemorrhage</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Muschelli J, Ullman N, Hanley D, Crainiceanu C
+</p>
+</li>
+<li data-index="84" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2015</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Accuracy%20of%20the%20ABC%2F2%20score%20for%20intracerebral%20hemorrhage%3A%20Systematic%20review%20and%20analysis%20of%20MISTIE%2C%20CLEAR-IVH%2C%20and%20CLEAR%20III">Accuracy of the ABC/2 score for intracerebral hemorrhage: Systematic review and analysis of MISTIE, CLEAR-IVH, and CLEAR III</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Webb AJ, Ullman NL, Morgan TC, Muschelli J, Kornbluth J, Awad IA, Mayo S, Rosenblum M, Ziai W, Zuccarrello M, et al.
+</p>
+</li>
+<li data-index="85" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2015</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.32614/rj-2015-013">Fslr: Connecting the FSL software with r</a> <span class="tl-venue">The R Journal</span>
+<p class="tl-desc">
+Muschelli J, Sweeney E, Lindquist M, Crainiceanu C
+</p>
+</li>
+<li data-index="86" data-categories="Q29uZmVyZW5jZSUyMHBhcGVy">
+<div class="tl-meta">
+<span class="tl-year">2015</span><span class="tl-type">Conference paper</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Impact%20of%20blood%20removal%20on%20perihematomal%20apparent%20diffusion%20coefficients%20in%20patients%20treated%20with%20minimally%20invasive%20surgery%20plus%20rt-PA">Impact of blood removal on perihematomal apparent diffusion coefficients in patients treated with minimally invasive surgery plus rt-PA</a> <span class="tl-venue">STROKE</span>
+<p class="tl-desc">
+Mould WA, Lovett BL, Muschelli J, Hanley DF, Carhuapoma JR
+</p>
+</li>
+<li data-index="87" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2015</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.pscychresns.2015.08.001">Motor overflow in children with attention-deficit/hyperactivity disorder is associated with decreased extent of neural activation in the motor cortex</a> <span class="tl-venue">Psychiatry Research: Neuroimaging</span>
+<p class="tl-desc">
+Gaddis A, Rosch KS, Dirlikov B, Crocetti D, MacNeil L, Barber AD, Muschelli J, Caffo B, Pekar JJ, Mostofsky SH
+</p>
+</li>
+<li data-index="88" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2015</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1177/0883073815600869">Neural correlates of visuomotor learning in autism</a> <span class="tl-venue">Journal of Child Neurology</span>
+<p class="tl-desc">
+Sharer E, Crocetti D, Muschelli J, Barber AD, Nebel MB, Caffo BS, Pekar JJ, Mostofsky SH
+</p>
+</li>
+<li data-index="89" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2015</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1161/strokeaha.115.010369">Quantitative intracerebral hemorrhage localization</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Muschelli J, Ullman NL, Sweeney EM, Eloyan A, Martin N, Vespa P, Hanley DF, Crainiceanu CM
+</p>
+</li>
+<li data-index="90" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2015</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1371/journal.pone.0140134">Reproducibility and temporal structure in weekly resting-state fMRI over a period of 3.5 years</a> <span class="tl-venue">PloS One</span>
+<p class="tl-desc">
+Choe AS, Jones CK, Joel SE, Muschelli J, Belegu V, Caffo BS, Lindquist MA, Van Zijl PC, Pekar JJ
+</p>
+</li>
+<li data-index="91" data-categories="Q29uZmVyZW5jZSUyMHBhcGVy">
+<div class="tl-meta">
+<span class="tl-year">2015</span><span class="tl-type">Conference paper</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Trends%2C%20seasonality%2C%20and%20persistence%20of%20resting-state%20fMRI%20over%20185%20weeks">Trends, seasonality, and persistence of resting-state fMRI over 185 weeks</a> <span class="tl-venue">Int Soc Magn Reson Med</span>
+<p class="tl-desc">
+Choe AS, Jones CK, Joel SE, Muschelli J, Belegu V, Lindquist MA, Caffo BS, Zijl P, Pekar JJ
+</p>
+</li>
+<li data-index="92" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2015</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.neuroimage.2015.03.074">Validated automatic brain extraction of head CT images</a> <span class="tl-venue">Neuroimage</span>
+<p class="tl-desc">
+Muschelli J, Ullman NL, Mould WA, Vespa P, Hanley DF, Crainiceanu CM
+</p>
+</li>
+<li data-index="93" data-categories="QWJzdHJhY3Q=">
+<div class="tl-meta">
+<span class="tl-year">2014</span><span class="tl-type">Abstract</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1161/str.45.suppl_1.wmp85">Abstract w MP85: MRI demonstrates sustained effect of early surgery on perihematomal edema</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Mould W, Zentar M, Muschelli J, Carhuapoma J, Hanley DF
+</p>
+</li>
+<li data-index="94" data-categories="QWJzdHJhY3Q=">
+<div class="tl-meta">
+<span class="tl-year">2014</span><span class="tl-type">Abstract</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1161/str.45.suppl_1.wmp86">Abstract w mp86: Improving the accuracy of the abc/2 estimation technique in spontaneous supratentorial intracerebral hemorrhage</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Ziai W, Nekoovaght-Tak S, Betz JF, Muschelli J, Fisico RN, Li X, Hanley DF
+</p>
+</li>
+<li data-index="95" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2014</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1371/journal.pone.0089470">Analytic programming with fMRI data: A quick-start guide for statisticians using r</a> <span class="tl-venue">PloS One</span>
+<p class="tl-desc">
+Eloyan A, Li S, Muschelli J, Pekar JJ, Mostofsky SH, Caffo BS
+</p>
+</li>
+<li data-index="96" data-categories="Qm9vayUyMGNoYXB0ZXI=">
+<div class="tl-meta">
+<span class="tl-year">2014</span><span class="tl-type">Book chapter</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/b978-0-444-63431-3.00007-3">Binomial regression in r</a> <span class="tl-venue">Handbook of Statistics</span>
+<p class="tl-desc">
+Muschelli J, Betz J, Varadhan R
+</p>
+</li>
+<li data-index="97" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2014</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.32614/rj-2014-004">brainR: Interactive 3 and 4d images of high resolution neuroimage data</a> <span class="tl-venue">R Journal</span>
+<p class="tl-desc">
+Muschelli J, Sweeney E, Crainiceanu C
+</p>
+</li>
+<li data-index="98" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2014</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1002/hbm.22188">Disruption of functional organization within the primary motor cortex in children with autism</a> <span class="tl-venue">Human Brain Mapping</span>
+<p class="tl-desc">
+Nebel MB, Joel SE, Muschelli J, Barber AD, Caffo BS, Pekar JJ, Mostofsky SH
+</p>
+</li>
+<li data-index="99" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2014</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1016/j.neuroimage.2014.03.028">Reduction of motion-related artifacts in resting state fMRI using aCompCor</a> <span class="tl-venue">Neuroimage</span>
+<p class="tl-desc">
+Muschelli J, Nebel MB, Caffo BS, Barber AD, Pekar JJ, Mostofsky SH
+</p>
+</li>
+<li data-index="100" data-categories="Q29uZmVyZW5jZSUyMHBhcGVy">
+<div class="tl-meta">
+<span class="tl-year">2013</span><span class="tl-type">Conference paper</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Administration%20of%20tissue%20plasminogen%20activator%20to%20patients%20with%20spontaneous%20ICH%20does%20not%20lead%20to%20an%20increase%20in%20perihematomal%20edema">Administration of tissue plasminogen activator to patients with spontaneous ICH does not lead to an increase in perihematomal edema</a> <span class="tl-venue">STROKE</span>
+<p class="tl-desc">
+Mould WA, Carhuapoma JR, Muschelli J, Hanley DF
+</p>
+</li>
+<li data-index="101" data-categories="Q29uZmVyZW5jZSUyMHBhcGVy">
+<div class="tl-meta">
+<span class="tl-year">2013</span><span class="tl-type">Conference paper</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Catheter%20placement%20and%20surgical%20training%20in%20the%20minimally%20invasive%20surgery%20plus%20rt-PA%20for%20intracerebral%20hemorrhage%20evacuation%20trial">Catheter placement and surgical training in the minimally invasive surgery plus rt-PA for intracerebral hemorrhage evacuation trial</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Ullman NL, Muschelli J, Li M, Morgan TC, Awad IA, Zuccarello M, Lane K, Hanley DF
+</p>
+</li>
+<li data-index="102" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2013</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1161/strokeaha.111.000411">Minimally invasive surgery plus recombinant tissue-type plasminogen activator for intracerebral hemorrhage evacuation decreases perihematomal edema</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Mould WA, Carhuapoma JR, Muschelli J, Lane K, Morgan TC, McBee NA, Bistran-Hall AJ, Ullman NL, Vespa P, Martin NA, et al.
+</p>
+</li>
+<li data-index="103" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2013</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=MISTIE%20investigators%3A%20Minimally%20invasive%20surgery%20plus%20recombinant%20tissue-type%20plasminogen%20activator%20for%20intracerebral%20hemorrhage%20evacuation%20decreases%20perihematomal%20edema">MISTIE investigators: Minimally invasive surgery plus recombinant tissue-type plasminogen activator for intracerebral hemorrhage evacuation decreases perihematomal edema</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Mould W, Carhuapoma J, Muschelli J, Lane K, Morgan T, McBee N, Bistran-Hall A, Ullman N, Vespa P, Martin N, et al.
+</p>
+</li>
+<li data-index="104" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2013</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=%D0%94%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D0%BB%3A%20Upload%20%D0%BE%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%20%D0%BD%D0%B0%D1%80%D1%83%D1%88%D0%B0%D0%B5%D1%82%20%D0%B2%D0%B0%D1%88%D0%B8%20%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BF%D1%80%D0%B0%D0%B2%D0%B0%3F%20%D0%A1%D0%BE%D0%BE%D0%B1%D1%89%D0%B8%D1%82%D0%B5%20%D0%BD%D0%B0%D0%BC.%20%D0%B2%D1%83%D0%B7">Добавил: Upload опубликованный материал нарушает ваши авторские права? Сообщите нам. вуз</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Mould WA, Carhuapoma JR, Muschelli J, Lane K, Morgan TC, McBee NA, Bistran-Hall AJ, Ullman NL, Vespa P, Martin NA, et al.
+</p>
+</li>
+<li data-index="105" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2012</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1002/pbc.24129">Ambulatory care connections of medicaid-insured children with sickle cell disease</a> <span class="tl-venue">Pediatric Blood &amp; Cancer</span>
+<p class="tl-desc">
+Bundy DG, Muschelli J, Clemens GD, Strouse JJ, Thompson RE, Casella JF, Miller MR
+</p>
+</li>
+<li data-index="106" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2012</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.3389/fnsys.2012.00061">Automated diagnoses of attention deficit hyperactive disorder using magnetic resonance imaging</a> <span class="tl-venue">Frontiers in Systems Neuroscience</span>
+<p class="tl-desc">
+Eloyan A, Muschelli J, Nebel MB, Liu H, Han F, Zhao T, Barber AD, Joel S, Pekar JJ, Mostofsky SH, et al.
+</p>
+</li>
+<li data-index="107" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2012</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1007/s12028-011-9569-9">Drainage efficiency with dual versus single catheters in severe intraventricular hemorrhage</a> <span class="tl-venue">Neurocritical Care</span>
+<p class="tl-desc">
+Hinson HE, Melnychuk E, Muschelli J, Hanley DF, Awad IA, Ziai WC
+</p>
+</li>
+<li data-index="108" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2012</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1161/strokeaha.111.641050">Factors affecting clot lysis rates in patients with spontaneous intraventricular hemorrhage</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Ziai WC, Muschelli J, Thompson CB, Keyl PM, Lane K, Shao S, Hanley DF
+</p>
+</li>
+<li data-index="109" data-categories="Q29uZmVyZW5jZSUyMHBhcGVy">
+<div class="tl-meta">
+<span class="tl-year">2012</span><span class="tl-type">Conference paper</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=MISTIE%20phase%20II%20results%3A%20Safety%2C%20efficacy%20and%20surgical%20performance">MISTIE phase II results: Safety, efficacy and surgical performance</a> <span class="tl-venue">CEREBROVASCULAR DISEASES</span>
+<p class="tl-desc">
+Hanley DF, Zuccarello M, Lane K, Broaddus W, Awad I, Aldrich E, Wijman C, Vespa P, Caron J, Huang J, et al.
+</p>
+</li>
+<li data-index="110" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2012</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Resolution%20of%20intraventricular%20hemorrhage%20varies%20by%20ventricular%20region%20and%20dose%20of%20intraventricular%20thrombolytic%3A%20The%20clot%20lysis%3A%20Evaluating%20accelerated%20resolution%20of%20IVH%20%28CLEAR%20IVH%29%20program">Resolution of intraventricular hemorrhage varies by ventricular region and dose of intraventricular thrombolytic: The clot lysis: Evaluating accelerated resolution of IVH (CLEAR IVH) program</a> <span class="tl-venue">Stroke</span>
+<p class="tl-desc">
+Webb AJ, Ullman NL, Mann S, Muschelli J, Awad IA, Hanley DF
+</p>
+</li>
+<li data-index="111" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2012</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1227/neu.0b013e31823f6571">Ventricular catheter location and the clearance of intraventricular hemorrhage</a> <span class="tl-venue">Neurosurgery</span>
+<p class="tl-desc">
+Jaffe J, Melnychuk E, Muschelli J, Ziai W, Morgan T, Hanley DF, Awad IA
+</p>
+</li>
+<li data-index="112" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2011</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.1086/662621">Epidemiology of central line-associated bloodstream infections in the pediatric intensive care unit</a> <span class="tl-venue">Infection Control &amp; Hospital Epidemiology</span>
+<p class="tl-desc">
+Niedner MF, Huskins WC, Colantuoni E, Muschelli J, Harris II JM, Rice TB, Brilli RJ, Miller MR
+</p>
+</li>
+<li data-index="113" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">2011</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://doi.org/10.3171/2011.5.jns10505">Minimally invasive evacuation of spontaneous intracerebral hemorrhage using sonothrombolysis</a> <span class="tl-venue">Journal of Neurosurgery</span>
+<p class="tl-desc">
+Newell DW, Shah MM, Wilcox R, Hansmann DR, Melnychuk E, Muschelli J, Hanley DF
+</p>
+</li>
+<li data-index="114" data-categories="VGhlc2lz">
+<div class="tl-meta">
+<span class="tl-year">2010</span><span class="tl-type">Thesis</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=An%20iterative%20approach%20to%20hemodynamic%20response%20function%20temporal%20derivatives%20in%20statistical%20parametric%20mapping%20for%20functional%20neuroimaging">An iterative approach to hemodynamic response function temporal derivatives in statistical parametric mapping for functional neuroimaging</a> <span class="tl-venue">PhD Thesis, Johns Hopkins University</span>
+<p class="tl-desc">
+Muschelli J
+</p>
+</li>
+<li data-index="115" data-categories="Q29uZmVyZW5jZSUyMHBhcGVy">
+<div class="tl-meta">
+<span class="tl-year">2010</span><span class="tl-type">Conference paper</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Dual%20intraventricular%20catheter%20use%20in%20severe%20intraventricular%20hemorrhage">Dual intraventricular catheter use in severe intraventricular hemorrhage</a> <span class="tl-venue">NEUROLOGY</span>
+<p class="tl-desc">
+Hinson HE, Melnychuk E, Muschelli J, Hanley DF, Ziai WC
+</p>
+</li>
+<li data-index="116" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">Year unknown</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Accuracy%20of%20the%20ABC%2F2%20score%20for%20intracerebral%20haemorrhage%3A%20A%20systematic%20review%20and%20combined%20analysis%20of%20MISTIE%2C%20CLEAR-IVH%2C%20CLEAR%20III">Accuracy of the ABC/2 score for intracerebral haemorrhage: A systematic review and combined analysis of MISTIE, CLEAR-IVH, CLEAR III</a> <span class="tl-venue"></span>
+<p class="tl-desc">
+Webb A, Ullman N, Morgan T, Muschelli J, Kornbluth J, Awad I, Mayo S, Thompson R, Ziai W, Zuccerrello M
+</p>
+</li>
+<li data-index="117" data-categories="Sm91cm5hbCUyMGFydGljbGU=">
+<div class="tl-meta">
+<span class="tl-year">Year unknown</span><span class="tl-type">Journal article</span>
+</div>
+<a class="tl-title" href="https://scholar.google.com/scholar?q=Reliability%20of%20intrinsic%20networks%20over%20128%20weeks">Reliability of intrinsic networks over 128 weeks</a> <span class="tl-venue"></span>
+<p class="tl-desc">
+Choe AS, Joel SE, Jones CK, Muschelli J, Belegu V, McDonald JW, Caffo BS, Zijl PC, Pekar JJ
+</p>
+</li>
+</ul>
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
 <section id="publications-as-a-wordcloud" class="level2">
 <h2 class="anchored" data-anchor-id="publications-as-a-wordcloud">Publications as a wordcloud</h2>
 <p>Co-authors’ last names on the left, words from my paper titles on the right.</p>
 <p><img src="images/Muschelli_wordcloud.png" class="wordcloud img-fluid" alt="Wordcloud of co-author names and title words"></p>
+
 
 
 </section>

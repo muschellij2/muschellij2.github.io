@@ -1,0 +1,150 @@
+---
+title: "Research"
+subtitle: "Accelerometry, NHANES, neuroimaging, machine learning, and reproducible reporting."
+# Papers and repos live in data/research-papers.yml and data/research-repos.yml;
+# each section below filters them by `theme`.
+listing:
+  - id: accel-papers
+    contents: data/research-papers.yml
+    template: _templates/timeline.ejs
+    include: {theme: accelerometry}
+    sort: false
+  - id: accel-repos
+    contents: data/research-repos.yml
+    template: _templates/software.ejs
+    include: {theme: accelerometry}
+    sort: false
+  - id: nhanes-papers
+    contents: data/research-papers.yml
+    template: _templates/timeline.ejs
+    include: {theme: nhanes}
+    sort: false
+  - id: nhanes-repos
+    contents: data/research-repos.yml
+    template: _templates/software.ejs
+    include: {theme: nhanes}
+    sort: false
+  - id: neuro-papers
+    contents: data/research-papers.yml
+    template: _templates/timeline.ejs
+    include: {theme: neuroimaging}
+    sort: false
+  - id: neuro-repos
+    contents: data/research-repos.yml
+    template: _templates/software.ejs
+    include: {theme: neuroimaging}
+    sort: false
+  - id: ml-papers
+    contents: data/research-papers.yml
+    template: _templates/timeline.ejs
+    include: {theme: ml}
+    sort: false
+  - id: ml-repos
+    contents: data/research-repos.yml
+    template: _templates/software.ejs
+    include: {theme: ml}
+    sort: false
+  - id: repro-papers
+    contents: data/research-papers.yml
+    template: _templates/timeline.ejs
+    include: {theme: reproducible}
+    sort: false
+  - id: repro-repos
+    contents: data/research-repos.yml
+    template: _templates/software.ejs
+    include: {theme: reproducible}
+    sort: false
+---
+
+A few threads run through my work: get messy biomedical data into a form people
+can analyze, write open-source software so others can do the same, and check
+that the methods hold up. Below are the projects I'm working on now, the papers
+I'd point someone to first, and the repositories I find most useful. Everything
+else is on the [Software](software.qmd) and [Publications](publications.qmd)
+pages and on [GitHub](https://github.com/muschellij2).
+
+## Accelerometry & wearables {#accelerometry}
+
+Most of my current work is on wrist-worn accelerometers: turning raw,
+sub-second data into steps, sleep, non-wear, and activity measures that can be
+compared across devices and studies. With the
+[JHU Wearables group](https://github.com/jhuwit) I maintain a family of R
+packages, collected in [activerse](https://jhuwit.github.io/activerse/), that
+read data from many devices and run open-source algorithms, such as the Oxford
+step-count model, directly from R. A big part of this is benchmarking: we
+compare step-counting algorithms on publicly available data and in older
+adults in the ARIC study.
+
+::: {#accel-papers}
+:::
+
+::: {#accel-repos}
+:::
+
+## NHANES & population cohorts {#nhanes}
+
+NHANES is a nationally representative US sample with wrist accelerometry, and a
+lot of my time goes into making it usable. The 2011–2014 waves and the National
+Youth Fitness Survey released raw 80 Hz data, which is large and awkward to
+work with; [nhanes_80hz](https://github.com/muschellij2/nhanes_80hz) is the
+pipeline we use to process it. We have used these data to compare
+step-counting algorithms across the US population and to study physical
+activity as a predictor of mortality, alongside similar work in the UK Biobank.
+
+::: {#nhanes-papers}
+:::
+
+::: {#nhanes-repos}
+:::
+
+## Neuroimaging {#neuroimaging}
+
+Much of my earlier work was on CT imaging of stroke: extracting the brain from
+head CT and segmenting intracerebral hemorrhage. Along the way I built R
+infrastructure for medical imaging, including
+[Neuroconductor](https://doi.org/10.1093/biostatistics/kxx068), a platform for
+imaging packages in R, and interfaces such as
+[fslr](https://github.com/muschellij2/fslr) and
+[freesurfer](https://github.com/muschellij2/freesurfer) that let you call the
+standard imaging tools from R. I still maintain these, and the CT work produced
+open methods and data, including a public high-resolution CT brain template.
+
+::: {#neuro-papers}
+:::
+
+::: {#neuro-repos}
+:::
+
+## Machine learning & AI {#ml}
+
+Machine learning runs through all of this. For hemorrhage on CT we went from
+random-forest classification of each voxel to 3D deep neural networks, and
+then to Bayesian deep learning that outperformed the volume estimators used in
+clinical trials. In wearables, many of the best step, activity, and sleep
+models are deep-learning models written in Python; I wrap them in R so they can
+be run on large cohorts and compared fairly. I also care about how models are
+evaluated: ROC and AUC can mislead when the predictor is binary. More recently
+I've written [opendataloader](https://github.com/muschellij2/opendataloader)
+to turn PDFs into structured text from R.
+
+::: {#ml-papers}
+:::
+
+::: {#ml-repos}
+:::
+
+## Reproducible reporting {#reproducible}
+
+I want analyses that can be rerun and teaching materials that rebuild
+themselves. [ari](https://cran.r-project.org/package=ari), the Automated R
+Instructor, turns slides and a script into narrated lecture videos, so a course
+can be regenerated when the material changes, and
+[didactr](https://github.com/jhudsl/didactr) builds on it to automate whole
+courses. Most of my papers ship with public code and data, and this site is
+itself built with [Quarto](https://quarto.org) from plain data files.
+
+::: {#repro-papers}
+:::
+
+::: {#repro-repos}
+:::

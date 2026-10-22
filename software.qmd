@@ -1,7 +1,5 @@
 ---
 title: "Software"
-aliases:
-  - research.html
 subtitle: "R packages for wearables, neuroimaging, and talking to other tools."
 listing:
   id: packages

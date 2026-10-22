@@ -1,0 +1,126 @@
+# Featured repositories for the Research page, grouped by `theme` (one listing
+# per theme on research.qmd). Rendered with _templates/software.ejs:
+# `cran: true` -> CRAN download badge; otherwise tagged "GitHub".
+# `categories` is the small label on each card (kind of repo).
+
+# ---- accelerometry & wearables ---------------------------------------------
+- title: activerse
+  description: The JHU Wearables family of actigraphy packages, attached together.
+  path: https://jhuwit.github.io/activerse/
+  categories: [R package]
+  theme: accelerometry
+- title: stepcount
+  description: Run the OxWearables step-count models from R.
+  path: https://cran.r-project.org/package=stepcount
+  categories: [R package]
+  cran: true
+  theme: accelerometry
+- title: swan
+  description: Estimate sleep-wear, wake-wear, and non-wear from raw wrist accelerometry.
+  path: https://github.com/muschellij2/swan
+  categories: [R package]
+  theme: accelerometry
+- title: accel_in_r
+  description: Course materials on working with accelerometer data in R.
+  path: https://github.com/jhuwit/accel_in_r
+  categories: [course]
+  theme: accelerometry
+
+# ---- NHANES & population cohorts -------------------------------------------
+- title: nhanes_80hz
+  description: Pipeline for the raw 80 Hz NHANES 2011–2014 and NNYFS accelerometry.
+  path: https://github.com/muschellij2/nhanes_80hz
+  categories: [pipeline]
+  theme: nhanes
+- title: mapnhanespa
+  description: Map physical activity to NHANES population quantiles.
+  path: https://cran.r-project.org/package=mapnhanespa
+  categories: [R package]
+  cran: true
+  theme: nhanes
+- title: stepcadence
+  description: Compute cadence metrics from NHANES step-count data.
+  path: https://github.com/jhuwit/stepcadence
+  categories: [R package]
+  theme: nhanes
+- title: biobankr
+  description: UK Biobank accelerometry analysis.
+  path: https://github.com/muschellij2/biobankr
+  categories: [analysis]
+  theme: nhanes
+
+# ---- neuroimaging ----------------------------------------------------------
+- title: fslr
+  description: Call FSL from R; the base of much of my imaging work.
+  path: https://github.com/muschellij2/fslr
+  categories: [R package]
+  theme: neuroimaging
+- title: ichseg
+  description: Intracerebral hemorrhage segmentation of head CT.
+  path: https://github.com/muschellij2/ichseg
+  categories: [R package]
+  theme: neuroimaging
+- title: high_res_ct_template
+  description: Paper, code, and images for a public high-resolution CT brain template.
+  path: https://github.com/muschellij2/high_res_ct_template
+  categories: [data]
+  theme: neuroimaging
+- title: Neurohacking
+  description: Materials for the Neurohacking Coursera course on imaging in R.
+  path: https://github.com/muschellij2/Neurohacking
+  categories: [course]
+  theme: neuroimaging
+- title: imaging_in_r
+  description: Neuroimaging analysis in R short course (ISBI 2017, ENAR 2018).
+  path: https://johnmuschelli.com/imaging_in_r/
+  categories: [course]
+  theme: neuroimaging
+
+# ---- machine learning & AI -------------------------------------------------
+- title: actinet
+  description: Deep-learning activity recognition from accelerometry, from R.
+  path: https://cran.r-project.org/package=actinet
+  categories: [R package]
+  cran: true
+  theme: ml
+- title: asleep
+  description: Estimate sleep from accelerometry data.
+  path: https://cran.r-project.org/package=asleep
+  categories: [R package]
+  cran: true
+  theme: ml
+- title: cforward
+  description: Forward selection using concordance / C-index.
+  path: https://cran.r-project.org/package=cforward
+  categories: [R package]
+  cran: true
+  theme: ml
+- title: opendataloader
+  description: Convert PDFs to Markdown, JSON, and HTML from R.
+  path: https://github.com/muschellij2/opendataloader
+  categories: [R package]
+  theme: ml
+
+# ---- reproducible reporting ------------------------------------------------
+- title: ari
+  description: Turn slides and a script into narrated lecture videos.
+  path: https://cran.r-project.org/package=ari
+  categories: [R package]
+  cran: true
+  theme: reproducible
+- title: didactr
+  description: Tools for building automated, regenerable courses.
+  path: https://github.com/jhudsl/didactr
+  categories: [R package]
+  theme: reproducible
+- title: diffr
+  description: Side-by-side diffs of code and text in HTML reports.
+  path: https://cran.r-project.org/package=diffr
+  categories: [R package]
+  cran: true
+  theme: reproducible
+- title: biostatmethods
+  description: Data and code for Methods in Biostatistics with R.
+  path: https://github.com/muschellij2/biostatmethods
+  categories: [book]
+  theme: reproducible

@@ -12,12 +12,21 @@ about:
     - icon: mortarboard
       text: Scholar
       href: https://scholar.google.com/citations?user=T9eqZgMAAAAJ&hl=en
+    - icon: person-badge
+      text: ORCID
+      href: https://orcid.org/0000-0001-6469-1750
+    - icon: building
+      text: JHU profile
+      href: https://publichealth.jhu.edu/faculty/2438/john-muschelli
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/pub/john-muschelli/20/a1b/188
+      href: https://www.linkedin.com/in/john-muschelli/
+    - icon: bluesky
+      text: Bluesky
+      href: https://bsky.app/profile/strictlystat.bsky.social
     - icon: twitter-x
-      text: "@strictlystat"
-      href: https://twitter.com/strictlystat
+      text: "@StrictlyStat"
+      href: https://x.com/StrictlyStat
     - icon: file-earmark-person
       text: CV
       href: https://github.com/muschellij2/CV/raw/master/Current_CV.pdf

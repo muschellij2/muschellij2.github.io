@@ -21,6 +21,41 @@
     "text": "Most of my work ends up as an R package: more than 30 on CRAN, plus many more on GitHub. My newer work on wearables lives with the JHU Wearables group and installs together via activerse. Filter by topic on the right.\n\n\n\n\nactiverse\n\n\nAttach the whole family of actigraphy packages at once, tidyverse-style.\n\n\nwearablesGitHub\n\n\n\n\nactibase\n\n\nBaseline functions for actigraphy and activity processing and analysis.\n\n\nwearables\n\n\n\n\nactiread\n\n\nRead actigraphy and activity data from many devices.\n\n\nwearables\n\n\n\n\nactimetrics\n\n\nCreate metrics for actigraphy and activity analysis.\n\n\nwearables\n\n\n\n\nactisomni\n\n\nCreate sleep measures from actigraphy data.\n\n\nwearables\n\n\n\n\nactiplot\n\n\nPlotting minute-level activity data.\n\n\nwearablesvisualization\n\n\n\n\nactiquantiles\n\n\nMap activity data to normalized quantiles.\n\n\nwearables\n\n\n\n\nmapnhanespa\n\n\nMap quantiles for physical activity from NHANES.\n\n\nwearables\n\n\n\n\nactisensorlog\n\n\nSummarize SensorLog / SensorLogger phone activity data.\n\n\nwearables\n\n\n\n\nactiwalkability\n\n\nAccess the EPA Walkability Index.\n\n\nwearablesinterfaces\n\n\n\n\nactinet\n\n\nEstimate human activity from accelerometry data.\n\n\nwearables\n\n\n\n\nstepcount\n\n\nEstimate step counts from accelerometry data (wraps OxWearables stepcount).\n\n\nwearables\n\n\n\n\nwalking\n\n\nSegment accelerometry data into walking bouts using open-source methods.\n\n\nwearables\n\n\n\n\nasleep\n\n\nEstimate sleep from accelerometry data.\n\n\nwearables\n\n\n\n\nsleeper\n\n\nEstimate sleep status from wrist-worn accelerometry data.\n\n\nwearables\n\n\n\n\nstepcadence\n\n\nCompute cadence metrics from NHANES step-count data.\n\n\nwearablesGitHub\n\n\n\n\nwrite.gt3x\n\n\nWrite ActiGraph GT3X files.\n\n\nwearablesGitHub\n\n\n\n\nfslr\n\n\nWrapper functions for FSL (FMRIB Software Library).\n\n\nneuroimaging\n\n\n\n\nneurobase\n\n\nNeuroconductor base package with helper functions for nifti objects.\n\n\nneuroimaging\n\n\n\n\nfreesurfer\n\n\nWrapper functions for FreeSurfer.\n\n\nneuroimaging\n\n\n\n\nWhiteStripe\n\n\nWhite-matter normalization for magnetic resonance images.\n\n\nneuroimaging\n\n\n\n\nstapler\n\n\nSimultaneous Truth and Performance Level Estimation (STAPLE).\n\n\nneuroimagingstatistics\n\n\n\n\ngifti\n\n\nRead neuroimaging GIFTI files with geometry information.\n\n\nneuroimaging\n\n\n\n\ncifti\n\n\nToolbox for Connectivity Informatics Technology Initiative (CIFTI) files.\n\n\nneuroimaging\n\n\n\n\nneurohcp\n\n\nInterface to the Human Connectome Project data.\n\n\nneuroimaginginterfaces\n\n\n\n\nbrainR\n\n\nHelper functions to misc3d and rgl for interactive 3D brain imaging.\n\n\nneuroimagingvisualization\n\n\n\n\nkirby21.base\n\n\nExample data from the multi-modal MRI reproducibility resource (also kirby21.t1, kirby21.fmri).\n\n\nneuroimagingdata\n\n\n\n\nichseg\n\n\nIntracerebral hemorrhage segmentation of CT scans.\n\n\nneuroimagingGitHub\n\n\n\n\nlungct\n\n\nSegmentation and analysis of lung CT scans.\n\n\nneuroimagingGitHub\n\n\n\n\nextrantsr\n\n\nAdditional functionality and extensions to ANTsR.\n\n\nneuroimagingGitHub\n\n\n\n\nspm12r\n\n\nR interface for SPM12 (Statistical Parametric Mapping) processing.\n\n\nneuroimagingGitHub\n\n\n\n\npapayar\n\n\nView medical research images with the Papaya JavaScript viewer.\n\n\nneuroimagingvisualizationGitHub\n\n\n\n\ndcm2niir\n\n\nR wrapper for the dcm2nii DICOM converter.\n\n\nneuroimagingGitHub\n\n\n\n\nneurovault\n\n\nNeuroVault database API access.\n\n\nneuroimaginginterfacesGitHub\n\n\n\n\ncforward\n\n\nForward selection using concordance / C-index.\n\n\nstatistics\n\n\n\n\ndiffr\n\n\nDisplay differences between two files using the Codediff library.\n\n\nvisualization\n\n\n\n\nrscopus\n\n\nScopus database API interface.\n\n\ninterfaces\n\n\n\n\ngcite\n\n\nGoogle Scholar citation parser.\n\n\ninterfaces\n\n\n\n\nmatlabr\n\n\nAn interface for MATLAB using system calls.\n\n\ninterfaces\n\n\n\n\ntext2speech\n\n\nText-to-speech conversion across several cloud services.\n\n\ninterfaces\n\n\n\n\nmscstts\n\n\nR client for the Microsoft Cognitive Services text-to-speech REST API.\n\n\ninterfaces\n\n\n\n\nglassdoor\n\n\nInterface to the Glassdoor API.\n\n\ninterfaces\n\n\n\n\nnsrr\n\n\nInterface to the National Sleep Research Resource.\n\n\ninterfacesGitHub\n\n\n\n\ndidactr\n\n\nTools for creating automated courses.\n\n\nteachingGitHub\n\n\n\nNo matching items"
   },
   {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Also on Google Scholar, ORCID, and in my CV. Search by title, co-author, journal, or year, or filter by type on the right."
+  },
+  {
+    "objectID": "publications.html#publications-as-a-wordcloud",
+    "href": "publications.html#publications-as-a-wordcloud",
+    "title": "Publications",
+    "section": "Publications as a wordcloud",
+    "text": "Publications as a wordcloud\nCo-authors’ last names on the left, words from my paper titles on the right."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "John Muschelli",
+    "section": "",
+    "text": "My name is John Muschelli (pronounced Moo-shell-e), and I am an Associate Research Professor in the Department of Biostatistics at the Johns Hopkins Bloomberg School of Public Health (JHSPH). I received my ScM in Biostatistics under the advising of Brian Caffo and my PhD under Ciprian Crainiceanu, both from JHSPH, and a BS in Biomathematics and Neuroscience from the University of Scranton.\nI work on wearable and accelerometry data (step counts, sleep, physical activity in studies like NHANES and UK Biobank) and on processing and analyzing medical images, usually of the brain (more on my research). I write a lot of R software to make that easier, teach data science, and co-host the podcast The Corresponding Author.\nMy blog, A HopStat and a Jump Away, is updated much more often than this site."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "John Muschelli",
+    "section": "Bio & headshot",
+    "text": "Bio & headshot\nFor talk announcements and event programs:\n\nJohn Muschelli is an Associate Research Professor in the Department of Biostatistics at the Johns Hopkins Bloomberg School of Public Health. His research focuses on wearable and accelerometry data, including step counts, sleep, and physical activity in studies such as NHANES and the UK Biobank, and on the analysis of medical images of the brain. He has written more than 30 R packages on CRAN, co-hosts the podcast The Corresponding Author, and received the 2025 Johns Hopkins Excellence in Teaching Award. He holds an ScM and PhD in Biostatistics from Johns Hopkins and a BS in Biomathematics and Neuroscience from the University of Scranton.\n\nDownload headshot (JPG, 1920 × 2880, 0.9 MB) · Photo: Chris Hartlove"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "John Muschelli",
+    "section": "Contact",
+    "text": "Contact\nDepartment of Biostatistics, Johns Hopkins University\n615 N. Wolfe Street, Baltimore, MD 21205\nEmail: jmuschel [at] jhsph [dot] edu"
+  },
+  {
     "objectID": "projects.html",
     "href": "projects.html",
     "title": "Projects",
@@ -49,32 +84,46 @@
     "text": "Hackathons\n\n2015 · Safer Baltimore Biking, JHU Data Science Hackathon. Used open Baltimore City data on accidents and road hazards to map road safety; geocoded hazards and helped build the final Leaflet map.\n2015 · IdEar, MedHacks 1.0. A proof of concept that ears can act as biometric markers where population registries are poor, using SIFT features and an SVM. Top 10 of 30 teams."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "John Muschelli",
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
     "section": "",
-    "text": "My name is John Muschelli (pronounced Moo-shell-e), and I am an Associate Research Professor in the Department of Biostatistics at the Johns Hopkins Bloomberg School of Public Health (JHSPH). I received my ScM in Biostatistics under the advising of Brian Caffo and my PhD under Ciprian Crainiceanu, both from JHSPH, and a BS in Biomathematics and Neuroscience from the University of Scranton.\nI work on wearable and accelerometry data (step counts, sleep, physical activity in studies like NHANES and UK Biobank) and on processing and analyzing medical images, usually of the brain. I write a lot of R software to make that easier, teach data science, and co-host the podcast The Corresponding Author.\nMy blog, A HopStat and a Jump Away, is updated much more often than this site."
+    "text": "A few threads run through my work: get messy biomedical data into a form people can analyze, write open-source software so others can do the same, and check that the methods hold up. Below are the projects I’m working on now, the papers I’d point someone to first, and the repositories I find most useful. Everything else is on the Software and Publications pages and on GitHub."
   },
   {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "John Muschelli",
-    "section": "Contact",
-    "text": "Contact\nDepartment of Biostatistics, Johns Hopkins University\n615 N. Wolfe Street, Baltimore, MD 21205\nEmail: jmuschel [at] jhsph [dot] edu"
+    "objectID": "research.html#accelerometry",
+    "href": "research.html#accelerometry",
+    "title": "Research",
+    "section": "Accelerometry & wearables",
+    "text": "Accelerometry & wearables\nMost of my current work is on wrist-worn accelerometers: turning raw, sub-second data into steps, sleep, non-wear, and activity measures that can be compared across devices and studies. With the JHU Wearables group I maintain a family of R packages, collected in activerse, that read data from many devices and run open-source algorithms, such as the Oxford step-count model, directly from R. A big part of this is benchmarking: we compare step-counting algorithms on publicly available data and in older adults in the ARIC study.\n\n\n\n\n2025Senior author\n\nComparing step-counting algorithms for high-resolution wrist accelerometry data in older adults in the ARIC study Journals of Gerontology: Series A\n\n\n\n2024Senior author\n\nEvaluating step counting algorithms on subsecond wrist-worn accelerometry: a comparison using publicly available data Journal for the Measurement of Physical Behaviour\n\n\nNo matching items\n\n\n\n\n\nactiverse\n\n\nThe JHU Wearables family of actigraphy packages, attached together.\n\n\nR packageGitHub\n\n\n\n\nstepcount\n\n\nRun the OxWearables step-count models from R.\n\n\nR package\n\n\n\n\nswan\n\n\nEstimate sleep-wear, wake-wear, and non-wear from raw wrist accelerometry.\n\n\nR packageGitHub\n\n\n\n\naccel_in_r\n\n\nCourse materials on working with accelerometer data in R.\n\n\ncourseGitHub\n\n\n\nNo matching items"
   },
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
-    "section": "",
-    "text": "The full, up-to-date list lives on my Google Scholar profile and in my CV."
+    "objectID": "research.html#nhanes",
+    "href": "research.html#nhanes",
+    "title": "Research",
+    "section": "NHANES & population cohorts",
+    "text": "NHANES & population cohorts\nNHANES is a nationally representative US sample with wrist accelerometry, and a lot of my time goes into making it usable. The 2011–2014 waves and the National Youth Fitness Survey released raw 80 Hz data, which is large and awkward to work with; nhanes_80hz is the pipeline we use to process it. We have used these data to compare step-counting algorithms across the US population and to study physical activity as a predictor of mortality, alongside similar work in the UK Biobank.\n\n\n\n\n2025Senior author\n\nComparing step counting algorithms for high-resolution wrist accelerometry data in NHANES 2011–2014 Medicine & Science in Sports & Exercise\n\n\n\n2024Co-author\n\nNHANES 2011–2014: objective physical activity is the strongest predictor of all-cause mortality Medicine & Science in Sports & Exercise\n\n\n\n2021Co-author\n\nQuantifying the predictive performance of objectively measured physical activity on mortality in the UK Biobank Journals of Gerontology: Series A\n\n\nNo matching items\n\n\n\n\n\nnhanes_80hz\n\n\nPipeline for the raw 80 Hz NHANES 2011–2014 and NNYFS accelerometry.\n\n\npipelineGitHub\n\n\n\n\nmapnhanespa\n\n\nMap physical activity to NHANES population quantiles.\n\n\nR package\n\n\n\n\nstepcadence\n\n\nCompute cadence metrics from NHANES step-count data.\n\n\nR packageGitHub\n\n\n\n\nbiobankr\n\n\nUK Biobank accelerometry analysis.\n\n\nanalysisGitHub\n\n\n\nNo matching items"
   },
   {
-    "objectID": "publications.html#publications-as-a-wordcloud",
-    "href": "publications.html#publications-as-a-wordcloud",
-    "title": "Publications",
-    "section": "Publications as a wordcloud",
-    "text": "Publications as a wordcloud\nCo-authors’ last names on the left, words from my paper titles on the right."
+    "objectID": "research.html#neuroimaging",
+    "href": "research.html#neuroimaging",
+    "title": "Research",
+    "section": "Neuroimaging",
+    "text": "Neuroimaging\nMuch of my earlier work was on CT imaging of stroke: extracting the brain from head CT and segmenting intracerebral hemorrhage. Along the way I built R infrastructure for medical imaging, including Neuroconductor, a platform for imaging packages in R, and interfaces such as fslr and freesurfer that let you call the standard imaging tools from R. I still maintain these, and the CT work produced open methods and data, including a public high-resolution CT brain template.\n\n\n\n\n2018First author\n\nNeuroconductor: an R platform for medical imaging analysis Biostatistics\n\n\n\n2019Sole author\n\nRecommendations for processing head CT data Frontiers in Neuroinformatics\n\n\n\n2015First author\n\nValidated automatic brain extraction of head CT images NeuroImage\n\n\n\n2015First author\n\nfslr: connecting the FSL software with R The R Journal\n\n\n\n2014First author\n\nReduction of motion-related artifacts in resting state fMRI using aCompCor NeuroImage\n\n\nNo matching items\n\n\n\n\n\nfslr\n\n\nCall FSL from R; the base of much of my imaging work.\n\n\nR packageGitHub\n\n\n\n\nichseg\n\n\nIntracerebral hemorrhage segmentation of head CT.\n\n\nR packageGitHub\n\n\n\n\nhigh_res_ct_template\n\n\nPaper, code, and images for a public high-resolution CT brain template.\n\n\ndataGitHub\n\n\n\n\nNeurohacking\n\n\nMaterials for the Neurohacking Coursera course on imaging in R.\n\n\ncourseGitHub\n\n\n\n\nimaging_in_r\n\n\nNeuroimaging analysis in R short course (ISBI 2017, ENAR 2018).\n\n\ncourseGitHub\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research.html#ml",
+    "href": "research.html#ml",
+    "title": "Research",
+    "section": "Machine learning & AI",
+    "text": "Machine learning & AI\nMachine learning runs through all of this. For hemorrhage on CT we went from random-forest classification of each voxel to 3D deep neural networks, and then to Bayesian deep learning that outperformed the volume estimators used in clinical trials. In wearables, many of the best step, activity, and sleep models are deep-learning models written in Python; I wrap them in R so they can be run on large cohorts and compared fairly. I also care about how models are evaluated: ROC and AUC can mislead when the predictor is binary. More recently I’ve written opendataloader to turn PDFs into structured text from R.\n\n\n\n\n2022Senior author\n\nBayesian deep learning outperforms clinical trial estimators of intracerebral and intraventricular hemorrhage volume Journal of Neuroimaging\n\n\n\n2021Senior author\n\n3D deep neural network segmentation of intracerebral hemorrhage: development and validation for clinical trials Neuroinformatics\n\n\n\n2019Sole author\n\nROC and AUC with a binary predictor: a potentially misleading metric Journal of Classification\n\n\n\n2017First author\n\nPItcHPERFeCT: primary intracranial hemorrhage probability estimation using random forests on CT NeuroImage: Clinical\n\n\nNo matching items\n\n\n\n\n\nactinet\n\n\nDeep-learning activity recognition from accelerometry, from R.\n\n\nR package\n\n\n\n\nasleep\n\n\nEstimate sleep from accelerometry data.\n\n\nR package\n\n\n\n\ncforward\n\n\nForward selection using concordance / C-index.\n\n\nR package\n\n\n\n\nopendataloader\n\n\nConvert PDFs to Markdown, JSON, and HTML from R.\n\n\nR packageGitHub\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research.html#reproducible",
+    "href": "research.html#reproducible",
+    "title": "Research",
+    "section": "Reproducible reporting",
+    "text": "Reproducible reporting\nI want analyses that can be rerun and teaching materials that rebuild themselves. ari, the Automated R Instructor, turns slides and a script into narrated lecture videos, so a course can be regenerated when the material changes, and didactr builds on it to automate whole courses. Most of my papers ship with public code and data, and this site is itself built with Quarto from plain data files.\n\n\n\n\n2020Senior author\n\nari: the Automated R Instructor The R Journal\n\n\nNo matching items\n\n\n\n\n\nari\n\n\nTurn slides and a script into narrated lecture videos.\n\n\nR package\n\n\n\n\ndidactr\n\n\nTools for building automated, regenerable courses.\n\n\nR packageGitHub\n\n\n\n\ndiffr\n\n\nSide-by-side diffs of code and text in HTML reports.\n\n\nR package\n\n\n\n\nbiostatmethods\n\n\nData and code for Methods in Biostatistics with R.\n\n\nbookGitHub\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks.html",

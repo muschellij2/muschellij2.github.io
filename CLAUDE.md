@@ -9,7 +9,8 @@ its palette, fonts, radius, and motif via the SCSS variables (`$primary`,
 hard-code colours or fonts in pages or `styles/custom.scss`.
 
 - Never hand-edit generated files: `styles/_generated-*.scss`,
-  `_design/about.yml`, `_design/BRIEF.md`, `images/hero.svg`, `images/hero-dark.svg`.
+  `_design/about.yml`, `_design/BRIEF.md`, `images/hero.svg`, `images/hero-dark.svg`,
+  `data/publications.yml` (built from `data/citations.bib` by `_scripts/publications.R`).
 - New design dimensions go in `_design/decode-seed.R` as another `pick()` from
   unused hash digits, so the seed stays the single source of truth.
 - Content lists live in `data/*.yml`, rendered via `_templates/*.ejs`.
